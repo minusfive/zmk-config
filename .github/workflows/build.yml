@@ -1,5 +1,5 @@
 name: Build ZMK firmware
-on: [push, pull_request, workflow_dispatch]
+on: [push, workflow_dispatch]
 
 jobs:
   build:

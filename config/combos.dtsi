@@ -1,21 +1,21 @@
-
-#define COMBO(NAME, BINDINGS, KEYPOS, LAYERS, TERM) \
+/* Copied (modified) from https://github.com/caksoylar/zmk-config */
+#define COMBO(NAME, BINDINGS, KEYPOS, LAYERS, TERM, QUICKTAP) \
   combo_##NAME { \
     timeout-ms = <TERM>; \
     bindings = <BINDINGS>; \
     key-positions = <KEYPOS>; \
     layers = <LAYERS>; \
+    global-quick-tap-ms = <QUICKTAP>; \
   };
 
 #define COMBO_TERM_DEFAULT 30
+#define COMBO_QUICK_TAP_MS 100
 
 / {
   combos {
     compatible = "zmk,combos";
     /*
       KEY POSITIONS
-      Copied (modified) from https://github.com/caksoylar/zmk-config
-
       ╭────────────────────────╮  ╭────────────────────────╮
       │ 0   1   2   3   4   5  │  │ 6   7   8   9   10  11 │
       │ 12  13  14  15  16  17 │  │ 18  19  20  21  22  23 │
@@ -25,37 +25,38 @@
     */
 
     /* Layers */
-    COMBO(to_2, &to L2, 38 39, L1, COMBO_TERM_DEFAULT)
-    COMBO(to_3, &to Fn, 38 39, L2, COMBO_TERM_DEFAULT)
+    COMBO(to_2, &to L2, 38 39, L1, COMBO_TERM_DEFAULT, COMBO_QUICK_TAP_MS)
+    COMBO(to_3, &to Fn, 38 39, L2, COMBO_TERM_DEFAULT, COMBO_QUICK_TAP_MS)
 
     /* Symbols */
     // Left
-    COMBO(excl, &kp EXCL, 1 13, L1, COMBO_TERM_DEFAULT)
-    COMBO(at, &kp AT, 2 14, L1, COMBO_TERM_DEFAULT)
-    COMBO(hash, &kp HASH, 3 15, L1, COMBO_TERM_DEFAULT)
-    COMBO(dollar, &kp DOLLAR, 4 16, L1, COMBO_TERM_DEFAULT)
-    COMBO(percent, &kp PERCENT, 5 17, L1, COMBO_TERM_DEFAULT)
-    COMBO(caret, &kp CARET, 13 25, L1, COMBO_TERM_DEFAULT)
-    COMBO(ampersand, &kp AMPERSAND, 14 26, L1, COMBO_TERM_DEFAULT)
-    COMBO(star, &kp STAR, 15 27, L1, COMBO_TERM_DEFAULT)
-    COMBO(lpar, &kp LPAR, 16 28, L1, COMBO_TERM_DEFAULT)
-    COMBO(rpar, &kp RPAR, 17 29, L1, COMBO_TERM_DEFAULT)
+    COMBO(excl, &kp EXCL, 1 13, L1, COMBO_TERM_DEFAULT, COMBO_QUICK_TAP_MS)
+    COMBO(at, &kp AT, 2 14, L1, COMBO_TERM_DEFAULT, COMBO_QUICK_TAP_MS)
+    COMBO(hash, &kp HASH, 3 15, L1, COMBO_TERM_DEFAULT, COMBO_QUICK_TAP_MS)
+    COMBO(dollar, &kp DOLLAR, 4 16, L1, COMBO_TERM_DEFAULT, COMBO_QUICK_TAP_MS)
+    COMBO(percent, &kp PERCENT, 5 17, L1, COMBO_TERM_DEFAULT, COMBO_QUICK_TAP_MS)
+    COMBO(caret, &kp CARET, 13 25, L1, COMBO_TERM_DEFAULT, COMBO_QUICK_TAP_MS)
+    COMBO(ampersand, &kp AMPERSAND, 14 26, L1, COMBO_TERM_DEFAULT, COMBO_QUICK_TAP_MS)
+    COMBO(star, &kp STAR, 15 27, L1, COMBO_TERM_DEFAULT, COMBO_QUICK_TAP_MS)
+    COMBO(lpar, &kp LPAR, 16 28, L1, COMBO_TERM_DEFAULT, COMBO_QUICK_TAP_MS)
+    COMBO(rpar, &kp RPAR, 17 29, L1, COMBO_TERM_DEFAULT, COMBO_QUICK_TAP_MS)
     // Right
-    COMBO(minus, &kp MINUS, 7 19, L1 L2, COMBO_TERM_DEFAULT)
-    COMBO(equal, &kp EQUAL, 8 20, L1 L2, COMBO_TERM_DEFAULT)
-    COMBO(lbkt, &kp LBKT, 19 31, L1 L2, COMBO_TERM_DEFAULT)
-    COMBO(rbkt, &kp RBKT, 20 32, L1 L2, COMBO_TERM_DEFAULT)
-    COMBO(backslash, &kp BACKSLASH, 21 33, L1 L2, COMBO_TERM_DEFAULT)
+    COMBO(minus, &kp MINUS, 7 19, L1 L2, COMBO_TERM_DEFAULT, COMBO_QUICK_TAP_MS)
+    COMBO(equal, &kp EQUAL, 8 20, L1 L2, COMBO_TERM_DEFAULT, COMBO_QUICK_TAP_MS)
+    COMBO(semicolon, &kp SEMICOLON, 9 21, L1 L2, COMBO_TERM_DEFAULT, COMBO_QUICK_TAP_MS)
+    COMBO(lbkt, &kp LBKT, 19 31, L1 L2, COMBO_TERM_DEFAULT, COMBO_QUICK_TAP_MS)
+    COMBO(rbkt, &kp RBKT, 20 32, L1 L2, COMBO_TERM_DEFAULT, COMBO_QUICK_TAP_MS)
+    COMBO(backslash, &kp BACKSLASH, 21 33, L1 L2, COMBO_TERM_DEFAULT, COMBO_QUICK_TAP_MS)
 
     /* Bluetooth */
-    COMBO(bt_clear, &bt BT_CLR, 1 2 3 4, Fn, COMBO_TERM_DEFAULT)
-    COMBO(bt_sel_0, &bt BT_SEL 0, 1 13, Fn, COMBO_TERM_DEFAULT)
-    COMBO(bt_sel_1, &bt BT_SEL 1, 2 14, Fn, COMBO_TERM_DEFAULT)
-    COMBO(bt_sel_2, &bt BT_SEL 2, 3 15, Fn, COMBO_TERM_DEFAULT)
-    COMBO(bt_sel_3, &bt BT_SEL 3, 4 16, Fn, COMBO_TERM_DEFAULT)
-    COMBO(bt_sel_4, &bt BT_SEL 4, 5 17, Fn, COMBO_TERM_DEFAULT)
+    COMBO(bt_clear, &bt BT_CLR, 1 2 3 4, Fn, COMBO_TERM_DEFAULT, COMBO_QUICK_TAP_MS)
+    COMBO(bt_sel_0, &bt BT_SEL 0, 1 13, Fn, COMBO_TERM_DEFAULT, COMBO_QUICK_TAP_MS)
+    COMBO(bt_sel_1, &bt BT_SEL 1, 2 14, Fn, COMBO_TERM_DEFAULT, COMBO_QUICK_TAP_MS)
+    COMBO(bt_sel_2, &bt BT_SEL 2, 3 15, Fn, COMBO_TERM_DEFAULT, COMBO_QUICK_TAP_MS)
+    COMBO(bt_sel_3, &bt BT_SEL 3, 4 16, Fn, COMBO_TERM_DEFAULT, COMBO_QUICK_TAP_MS)
+    COMBO(bt_sel_4, &bt BT_SEL 4, 5 17, Fn, COMBO_TERM_DEFAULT, COMBO_QUICK_TAP_MS)
 
     /* Media */
-    COMBO(play, &kp C_PP, 6 7, L1 L2, COMBO_TERM_DEFAULT)
+    COMBO(play, &kp C_PP, 6 7, L1 L2, COMBO_TERM_DEFAULT, COMBO_QUICK_TAP_MS)
   };
 };

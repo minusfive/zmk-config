@@ -1,36 +1,49 @@
-#define TAPPING_TERM_MS 200
-#define QUICK_TAP_MS 120
+#define TAPPING_TERM_MS 280
+#define QUICK_TAP_MS 175
+#define GLOBAL_QUICK_TAP_MS 150
+
+// cancel caps-word, num-word and smart-mouse
+#define CANCEL &kp K_CANCEL
 
 &mt {
-  flavor = "tap-preferred";
+  flavor = "balanced";
   tapping-term-ms = <TAPPING_TERM_MS>;
   quick-tap-ms = <QUICK_TAP_MS>;
-  global-quick-tap;
+  global-quick-tap-ms = <GLOBAL_QUICK_TAP_MS>;
 };
 
 &lt {
   flavor = "balanced";
   tapping-term-ms = <TAPPING_TERM_MS>;
   quick-tap-ms = <QUICK_TAP_MS>;
+  global-quick-tap-ms = <GLOBAL_QUICK_TAP_MS>;
 };
 
 &sk {
   quick-release;
 };
 
+// mods deactivate caps-word, requires PR https://github.com/zmkfirmware/zmk/pull/1451
 &caps_word {
   continue-list = <UNDERSCORE MINUS BSPC DEL N1 N2 N3 N4 N5 N6 N7 N8 N9 N0>;
+  /delete-property/ ignore-modifiers;
 };
 
+// From: https://github.com/urob/zmk-config/
+// num-word, requires PR https://github.com/zmkfirmware/zmk/pull/1451
+&num_word {
+  layers = <L2>;
+  continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL>;
+};
 
 / {
   behaviors {
     /*
-    - tap: sticky shift
-    - double-tap: caps-word (shift + tap mod-morph)
-    - hold: shift
+     - tap: sticky shift
+     - double-tap: caps-word (shift + tap mod-morph)
+     - hold: shift
 
-    From: https: //github.com/urob/zmk-config/
+     From: https://github.com/urob/zmk-config/
      */
     smart_shift: smart_shift {
       label = "SMART_SHIFT";
@@ -40,13 +53,30 @@
       #binding-cells = <0>;
     };
 
-    /*
-    - tap: sticky ctrl
-    - hold: ctrl
-    - double-tap: sticky meh (ctrl + tap mod-morph)
-    - tap + hold: meh (ctrl + hold mod-morph)
 
-    From: https: //github.com/urob/zmk-config/
+    /*
+     - tap: num-word
+     - hold: &mo layer
+
+     From: https://github.com/urob/zmk-config/
+     */
+    smart_num: smart_num {
+      label = "SMART_NUM";
+      compatible = "zmk,behavior-hold-tap";
+      flavor = "balanced";
+      tapping-term-ms = <TAPPING_TERM_MS>;
+      bindings = <&mo>, <&num_word>;
+      #binding-cells = <2>;
+    };
+
+
+    /*
+     - tap: sticky ctrl
+     - hold: ctrl
+     - double-tap: sticky meh (ctrl + tap mod-morph)
+     - tap + hold: meh (ctrl + hold mod-morph)
+
+     From: https://github.com/urob/zmk-config/
      */
     ctrl_meh: ctrl_meh {
       label = "CTRL_MEH";
@@ -57,12 +87,12 @@
     };
 
     /*
-    - tap: backspace
-    - hold: repeat backspace
-    - shift + tap: delete
-    - shift + hold: repeat delete
+     - tap: backspace
+     - hold: repeat backspace
+     - shift + tap: delete
+     - shift + hold: repeat delete
 
-    From: https: //zmk.dev/docs/behaviors/mod-morph#advanced-configuration
+     From: https://zmk.dev/docs/behaviors/mod-morph#advanced-configuration
      */
     bspc_del: backspace_delete {
       label = "BACKSPACE_DELETE";
@@ -73,10 +103,10 @@
     };
 
     /*
-    - tap: brightness up
-    - hold: repeat brightness up
-    - shift + tap: brightness down
-    - shift + hold: repeat brightness down
+     - tap: brightness up
+     - hold: repeat brightness up
+     - shift + tap: brightness down
+     - shift + hold: repeat brightness down
      */
     brightness: brightness {
       label = "BRIGHTNESS";
@@ -87,8 +117,8 @@
     };
 
     /*
-    - tap: next track
-    - shift + tap: prev track
+     - tap: next track
+     - shift + tap: prev track
      */
     next_prev: next_prev {
       label = "NEXT_PREV_TRACK";
@@ -99,8 +129,8 @@
     };
 
     /*
-    - tap: next track
-    - shift + tap: prev track
+     - tap: next track
+     - shift + tap: prev track
      */
     volume: volume {
       label = "VOLUME";
