@@ -27,25 +27,111 @@ draw_config:
         --logo-position: 49.5% 5%;
 
         /* === Colors === */
+        --color--material--blue--50: #e3f2fd;
+        --color--material--blue--100: #bbdefb;
+        --color--material--blue--200: #90caf9;
+        --color--material--blue--300: #64b5f6;
+        --color--material--blue--400: #42a5f5;
+        --color--material--blue--500: #2196f3;
+        --color--material--blue--600: #1e88e5;
+        --color--material--blue--700: #1976d2;
+        --color--material--blue--800: #1565c0;
+        --color--material--blue--900: #0d47a1;
+        --color--material--blue--a100: #82b1ff;
+        --color--material--blue--a200: #448aff;
+        --color--material--blue--a400: #2979ff;
+        --color--material--blue--a700: #2962ff;
+
+        --color--material--blue-gray--50: #eceff1;
+        --color--material--blue-gray--100: #cfd8dc;
+        --color--material--blue-gray--200: #b0bec5;
+        --color--material--blue-gray--300: #90a4ae;
+        --color--material--blue-gray--400: #78909c;
+        --color--material--blue-gray--500: #607d8b;
+        --color--material--blue-gray--600: #546e7a;
+        --color--material--blue-gray--700: #455a64;
+        --color--material--blue-gray--800: #37474f;
+        --color--material--blue-gray--900: #263238;
+
+        --color--material--purple--50: #f3e5f5;
+        --color--material--purple--100: #e1bee7;
+        --color--material--purple--200: #ce93d8;
+        --color--material--purple--300: #ba68c8;
+        --color--material--purple--400: #ab47bc;
+        --color--material--purple--500: #9c27b0;
+        --color--material--purple--600: #8e24aa;
+        --color--material--purple--700: #7b1fa2;
+        --color--material--purple--800: #6a1b9a;
+        --color--material--purple--900: #4a148c;
+        --color--material--purple--a100: #ea80fc;
+        --color--material--purple--a200: #e040fb;
+        --color--material--purple--a400: #d500f9;
+        --color--material--purple--a700: #aa00ff;
+
+        --color--material--red--50: #ffebee;
+        --color--material--red--100: #ffcdd2;
+        --color--material--red--200: #ef9a9a;
+        --color--material--red--300: #e57373;
+        --color--material--red--400: #ef5350;
+        --color--material--red--500: #f44336;
+        --color--material--red--600: #e53935;
+        --color--material--red--700: #d32f2f;
+        --color--material--red--800: #c62828;
+        --color--material--red--900: #b71c1c;
+        --color--material--red--a100: #ff8a80;
+        --color--material--red--a200: #ff5252;
+        --color--material--red--a400: #ff1744;
+        --color--material--red--a700: #d50000;
+
+        --color--material--teal--50: #e0f2f1;
+        --color--material--teal--100: #b2dfdb;
+        --color--material--teal--200: #80cbc4;
+        --color--material--teal--300: #4db6ac;
+        --color--material--teal--400: #26a69a;
+        --color--material--teal--500: #009688;
+        --color--material--teal--600: #00897b;
+        --color--material--teal--700: #00796b;
+        --color--material--teal--800: #00695c;
+        --color--material--teal--900: #004d40;
+        --color--material--teal--a100: #a7ffeb;
+        --color--material--teal--a200: #64ffda;
+        --color--material--teal--a400: #1de9b6;
+        --color--material--teal--a700: #00bfa5;
+
+        --color--material--yellow--50: #fffde7;
+        --color--material--yellow--100: #fff9c4;
+        --color--material--yellow--200: #fff59d;
+        --color--material--yellow--300: #fff176;
+        --color--material--yellow--400: #ffee58;
+        --color--material--yellow--500: #ffeb3b;
+        --color--material--yellow--600: #fdd835;
+        --color--material--yellow--700: #fbc02d;
+        --color--material--yellow--800: #f9a825;
+        --color--material--yellow--900: #f57f17;
+        --color--material--yellow--a100: #ffff8d;
+        --color--material--yellow--a200: #ffff00;
+        --color--material--yellow--a400: #ffea00;
+        --color--material--yellow--a700: #ffd600;
+
         --color--bg: transparent;
-        --color--text: #37474f;
+        --color--text: var(--color--material--blue-gray--900);
 
         --color--layer--text: #90a4ae;
 
-        --color--key--bg: #eceff1;
+        --color--key--bg: var(--color--material--blue-gray--50);
         --color--key--border: var(--color--key--bg);
         --color--key--text--tap: var(--color--text);
-        --color--key--text--shifted: #78909c;
+        --color--key--text--shifted: var(--color--material--blue-gray--400);
         --color--key--text--hold: var(--color--layer--text);
 
         --color--combo--bg: var(--color--key--text--shifted);
         --color--combo--border: var(--color--combo--bg);
-        --color--combo--dendron: var(--color--combo--bg);
+        --color--combo--line: var(--color--combo--bg);
         --color--combo--text--tap: var(--color--key--bg);
         --color--combo--text--shifted: var(--color--combo--text--tap);
         --color--combo--text--hold: var(--color--combo--text--tap);
 
-        --color--trans--bg: #cfd8dc;
+        --color--trans--bg: var(--color--material--blue-gray--100);
         --color--trans--border: transparent;
         --color--trans--text--tap: var(--color--key--text--hold);
         --color--trans--text--shifted: var(--color--trans--text--tap);
@@ -85,9 +171,6 @@ draw_config:
     /* default key styling */
     .key {
         fill: var(--color--key--bg);
-        stroke: var(--color--key--border);
-        stroke-width: 1;
-        stroke-location: inside;
     }
 
     text {
@@ -136,7 +219,7 @@ draw_config:
     /* dendrons */
     path.combo {
         stroke-width: 1;
-        stroke: var(--color--combo--dendron);
+        stroke: var(--color--combo--line);
         stroke-dasharray: 2, 2;
         fill: none;
     }
@@ -222,9 +305,84 @@ draw_config:
      * Overrides
      */
 
+    /* Move dot and comma shifted carets a bit to give combos space */
     .tap + .hold.mdi\:apple-keyboard-command + .shifted,
     .tap + .hold.mdi\:apple-keyboard-option + .shifted {
         transform: translateY(8px);
+    }
+
+    /* Color special keys */
+    svg.keymap :nth-child(13 of .key) {
+        fill: var(--color--material--red--600);
+    }
+    svg.keymap :nth-child(24 of .key) {
+        fill: var(--color--material--teal--a700);
+    }
+    svg.keymap :nth-child(37 of .key) {
+        fill: var(--color--material--blue--600);
+    }
+    svg.keymap :nth-child(38 of .key) {
+        fill: var(--color--material--purple--500);
+    }
+    svg.keymap :nth-child(13 of .key) + .tap,
+    svg.keymap :nth-child(13 of .key) + .tap + .shifted,
+    svg.keymap :nth-child(13 of .key) + .tap + .hold,
+    svg.keymap :nth-child(13 of .key) + .tap + .hold + .shifted,
+    svg.keymap :nth-child(24 of .key) + .tap,
+    svg.keymap :nth-child(24 of .key) + .tap + .shifted,
+    svg.keymap :nth-child(24 of .key) + .tap + .hold,
+    svg.keymap :nth-child(24 of .key) + .tap + .hold + .shifted,
+    svg.keymap :nth-child(37 of .key) + .tap,
+    svg.keymap :nth-child(37 of .key) + .tap + .shifted,
+    svg.keymap :nth-child(37 of .key) + .tap + .hold,
+    svg.keymap :nth-child(37 of .key) + .tap + .hold + .shifted,
+    svg.keymap :nth-child(38 of .key) + .tap,
+    svg.keymap :nth-child(38 of .key) + .tap + .shifted,
+    svg.keymap :nth-child(38 of .key) + .tap + .hold,
+    svg.keymap :nth-child(38 of .key) + .tap + .hold + .shifted {
+      fill: var(--color--material--blue-gray--50);
+      opacity: 0.95;
+    }
+    svg.keymap :nth-child(13 of .key) + .tap + .shifted,
+    svg.keymap :nth-child(13 of .key) + .tap + .hold,
+    svg.keymap :nth-child(13 of .key) + .tap + .hold + .shifted,
+    svg.keymap :nth-child(24 of .key) + .tap + .shifted,
+    svg.keymap :nth-child(24 of .key) + .tap + .hold,
+    svg.keymap :nth-child(24 of .key) + .tap + .hold + .shifted,
+    svg.keymap :nth-child(37 of .key) + .tap + .shifted,
+    svg.keymap :nth-child(37 of .key) + .tap + .hold,
+    svg.keymap :nth-child(37 of .key) + .tap + .hold + .shifted,
+    svg.keymap :nth-child(38 of .key) + .tap + .shifted,
+    svg.keymap :nth-child(38 of .key) + .tap + .hold,
+    svg.keymap :nth-child(38 of .key) + .tap + .hold + .shifted {
+      opacity: 0.6;
+    }
+    svg.keymap .trans:nth-child(13 of .key),
+    svg.keymap .trans:nth-child(24 of .key),
+    svg.keymap .trans:nth-child(37 of .key),
+    svg.keymap .trans:nth-child(38 of .key) {
+      opacity: 0.7;
+    }
+    svg.keymap .trans:nth-child(13 of .key) + .tap,
+    svg.keymap .trans:nth-child(24 of .key) + .tap,
+    svg.keymap .trans:nth-child(37 of .key) + .tap,
+    svg.keymap .trans:nth-child(38 of .key) + .tap {
+      opacity: 0.6;
+    }
+
+    .key[height="82.0"] {
+        fill: var(--color--material--yellow--a700);
+    }
+    .key[height="82.0"] + .tap,
+    .key[height="82.0"] + .tap + .shifted,
+    .key[height="82.0"] + .tap + .hold,
+    .key[height="82.0"] + .tap + .hold + .shifted {
+      fill: var(--color--material--blue-gray--900);
+    }
+    .key[height="82.0"] + .tap + .shifted,
+    .key[height="82.0"] + .tap + .hold,
+    .key[height="82.0"] + .tap + .hold + .shifted {
+      opacity: 0.6;
     }
 
 
