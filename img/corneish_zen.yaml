@@ -66,7 +66,7 @@ layers:
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-up-bold$$
   - $$mdi:arrow-right-bold$$
-  - {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:toggle-switch$$'}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:apple-keyboard-control$$', h: '$$mdi:gesture-tap-hold$$'}
@@ -82,9 +82,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - L1
-  - L1
-  - {t: '$$mdi:circle-off-outline$$', s: '$$mdi:alpha-w-box$$'}
+  - {t: L1, h: '$$mdi:circle-off-outline$$', s: '$$mdi:alpha-w-box$$'}
+  - {t: L1, h: '$$mdi:circle-off-outline$$', s: '$$mdi:alpha-w-box$$'}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   Fn:
   - {t: '$$mdi:toggle-switch-outline$$', h: '$$mdi:bluetooth$$', s: '$$mdi:usb$$'}
@@ -130,10 +130,6 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
 combos:
-- p: [38, 39]
-  k: L2
-  l: [L1]
-  a: top
 - p: [1, 13]
   k: '!'
   l: [L1]

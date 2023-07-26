@@ -303,9 +303,6 @@ parse_config:
       tap: $$mdi:backup-restore$$
     "&bootloader":
       tap: $$mdi:progress-download$$
-    "CANCEL":
-      shifted: $$mdi:alpha-w-box$$
-      tap: $$mdi:circle-off-outline$$
 
   # ZMK
   zmk_keycode_map:
@@ -511,6 +508,10 @@ parse_config:
     # System
     C_POWER: $$mdi:power$$
     C_AL_LOCK: $$mdi:lock$$
+    K_CANCEL:
+      shifted: $$mdi:alpha-w-box$$
+      tap: L1
+      hold: $$mdi:circle-off-outline$$
 
     # Zoom
     RG(RS(A)):

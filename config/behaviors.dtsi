@@ -45,7 +45,7 @@
 
      From: https://github.com/urob/zmk-config/
      */
-    smart_shift: smart_shift {
+    /omit-if-no-ref/ smart_shift: smart_shift {
       label = "SMART_SHIFT";
       compatible = "zmk,behavior-mod-morph";
       bindings = <&sk RSHFT>, <&caps_word>;
@@ -60,7 +60,7 @@
 
      From: https://github.com/urob/zmk-config/
      */
-    smart_num: smart_num {
+    /omit-if-no-ref/ smart_num: smart_num {
       label = "SMART_NUM";
       compatible = "zmk,behavior-hold-tap";
       flavor = "balanced";
@@ -78,7 +78,7 @@
 
      From: https://github.com/urob/zmk-config/
      */
-    ctrl_meh: ctrl_meh {
+    /omit-if-no-ref/ ctrl_meh: ctrl_meh {
       label = "CTRL_MEH";
       compatible = "zmk,behavior-mod-morph";
       bindings = <&sk LCTRL>, <&sk MEH>;
@@ -94,7 +94,7 @@
 
      From: https://zmk.dev/docs/behaviors/mod-morph#advanced-configuration
      */
-    bspc_del: backspace_delete {
+    /omit-if-no-ref/ bspc_del: backspace_delete {
       label = "BACKSPACE_DELETE";
       compatible = "zmk,behavior-mod-morph";
       bindings = <&kp BACKSPACE>, <&kp DELETE>;
@@ -108,7 +108,7 @@
      - shift + tap: brightness down
      - shift + hold: repeat brightness down
      */
-    brightness: brightness {
+    /omit-if-no-ref/ brightness: brightness {
       label = "BRIGHTNESS";
       compatible = "zmk,behavior-mod-morph";
       bindings = <&kp C_BRI_UP>, <&kp C_BRI_DN>;
@@ -120,7 +120,7 @@
      - tap: next track
      - shift + tap: prev track
      */
-    next_prev: next_prev {
+    /omit-if-no-ref/ next_prev: next_prev {
       label = "NEXT_PREV_TRACK";
       compatible = "zmk,behavior-mod-morph";
       bindings = <&kp C_NEXT>, <&kp C_PREV>;
@@ -132,7 +132,7 @@
      - tap: next track
      - shift + tap: prev track
      */
-    volume: volume {
+    /omit-if-no-ref/ volume: volume {
       label = "VOLUME";
       compatible = "zmk,behavior-mod-morph";
       bindings = <&kp C_VOL_UP>, <&kp C_VOL_DN>;
