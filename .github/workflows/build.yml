@@ -7,6 +7,7 @@ on:
       - "config/*.dtsi"
       - "config/*.conf"
       - "config/west.yml"
+      - "build.yaml"
 
 jobs:
   build:

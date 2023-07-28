@@ -31,9 +31,10 @@
 
 // From: https://github.com/urob/zmk-config/
 // num-word, requires PR https://github.com/zmkfirmware/zmk/pull/1451
+// Adds arrows and shift to smart layer for more comfortable navigation/selection moves
 &num_word {
   layers = <L2>;
-  continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL>;
+  continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL RSHFT LEFT RIGHT UP DOWN>;
 };
 
 / {
@@ -94,7 +95,7 @@
 
      From: https://zmk.dev/docs/behaviors/mod-morph#advanced-configuration
      */
-    /omit-if-no-ref/ bspc_del: backspace_delete {
+    /omit-if-no-ref/ bkspc_del: backspace_delete {
       label = "BACKSPACE_DELETE";
       compatible = "zmk,behavior-mod-morph";
       bindings = <&kp BACKSPACE>, <&kp DELETE>;

@@ -1,18 +1,46 @@
 draw_config:
-  key_rx: 4.0
-  key_ry: 4.0
-  inner_pad_w: 1.0
-  inner_pad_h: 1.0
-  outer_pad_w: 5.0
-  outer_pad_h: 16.0
-  line_spacing: 1.0
-  combo_h: 24.0
+  # key dimensions, non-ortho layouts use key_h for width as well
+  # key_w: 100 # This doesn't seem to do anything? 🤔
+  key_h: 80
+
+  # keys border radius
+  key_rx: 4
+  key_ry: 4
+
+  # key labels line spacing for multi-line labels
+  line_spacing: 1
+
+  # combo box dimensions
+  combo_w: 32
+  combo_h: 36
+
+  # padding from the edge of cap to top and bottom legends
+  small_pad: 2
+
+  # Padding between keys
+  inner_pad_w: 1.5
+  inner_pad_h: 1.5
+
+  # padding between layers
+  outer_pad_w: 5
+  outer_pad_h: 5
+
+  # gap between two halves for ortho layout generator
+  # split_gap: 20 # This doesn't seem to have any effect either? 🤔
+
+  # as it reads on the tin can, this comment is here for consistency
   append_colon_to_layer_header: false
-  small_pad: 4.0
+
+  # shrink font size for legends wider than this many chars, set to 0 to disable
+  # ideal value depends on the font size defined in svg_style and width of the boxes
   shrink_wide_legends: 5
-  glyph_tap_size: 18
-  glyph_hold_size: 12
-  glyph_shifted_size: 10
+
+  # Glyphs dimensions
+  glyph_tap_size: 26
+  glyph_hold_size: 18
+  glyph_shifted_size: 18
+
+  # Custom CSS
   svg_style: |
     /* latin-ext */
     @font-face {
@@ -41,11 +69,13 @@ draw_config:
 
     /* font and background color specifications */
     svg.keymap {
+
         /*
          * ====================
          * Theme Variables
          * ====================
          */
+
         --logo-path: none;
         --logo-size: 12%;
         --logo-position: 49.5% 5%;
@@ -63,7 +93,7 @@ draw_config:
         --color--material--blue-gray--900: rgb(38, 50, 56);
 
         --color--bg: rgb(35, 40, 46);
-        --color--text: var(--color--material--blue-gray--900);
+        --color--text: var(--color--bg);
 
         --color--layer--text: #90a4ae;
 
@@ -73,10 +103,10 @@ draw_config:
         --color--key--text--shifted: var(--color--material--blue-gray--400);
         --color--key--text--hold: var(--color--layer--text);
 
-        --color--combo--bg: rgba(87, 197, 182, 0.9);
-        --color--combo--border: transparent;
+        --color--combo--bg: rgba(87, 197, 182, 0.8);
+        --color--combo--border: var(--color--combo--bg);
         --color--combo--dendron: var(--color--combo--bg);
-        --color--combo--text--tap: var(--color--bg);
+        --color--combo--text--tap: var(--color--text);
         --color--combo--text--shifted: var(--color--combo--text--tap);
         --color--combo--text--hold: var(--color--combo--text--tap);
 
@@ -104,9 +134,8 @@ draw_config:
          * ====================
          */
 
-
         font-family: REM,SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
-        font-size: 16px;
+        font-size: 24px;
         font-kerning: normal;
         text-rendering: optimizeLegibility;
         fill: var(--color--text);
@@ -135,18 +164,19 @@ draw_config:
         text-anchor: start;
         paint-order: stroke;
         fill: var(--color--layer--text);
-        dominant-baseline: hanging;
+        dominant-baseline: text-before-edge;
+
     }
 
     .shifted {
-        font-size: 11px;
+        font-size: 16px;
         text-anchor: middle;
         dominant-baseline: hanging;
     }
     .hold {
-        font-size: 11px;
+        font-size: 16px;
         text-anchor: middle;
-        dominant-baseline: auto;
+        dominant-baseline: ideographic;
     }
 
     .tap:not(.combo) {
@@ -173,17 +203,16 @@ draw_config:
         stroke-dasharray: 2, 2;
         fill: none;
     }
+    .combo.tap {
+        font-size: 16px;
+        fill: var(--color--combo--text--tap);
+    }
     .combo.hold,
     .combo.shifted {
-        font-size: 8px;
-    }
-    .combo.tap {
-        font-size: 11px;
-        fill: var(--color--combo--text--tap);
+        font-size: 14px;
     }
     .combo.shifted {
         fill: var(--color--combo--text--shifted);
-        dominant-baseline: mathematical;
     }
     .combo.hold {
         fill: var(--color--combo--text--hold);
@@ -204,7 +233,6 @@ draw_config:
         stroke: var(--color--trans--border);
     }
     .trans.tap {
-        font-size: 11px;
         fill: var(--color--trans--text--tap);
     }
     .trans.shifted {
@@ -222,7 +250,6 @@ draw_config:
         stroke: var(--color--none--border);
     }
     .none.tap {
-        font-size: 11px;
         fill: var(--color--none--text--tap);
     }
     .none.shifted {
@@ -240,7 +267,6 @@ draw_config:
         stroke: var(--color--ghost--border);
     }
     .ghost.tap {
-        font-size: 11px;
         fill: var(--color--ghost--text--tap);
     }
     .ghost.shifted {
@@ -257,7 +283,7 @@ draw_config:
 
     .tap + .hold.mdi\:apple-keyboard-command + .shifted,
     .tap + .hold.mdi\:apple-keyboard-option + .shifted {
-        translate: 0 8px;
+        translate: 0 16px;
     }
 
 
