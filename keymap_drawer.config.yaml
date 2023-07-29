@@ -183,27 +183,29 @@ draw_config:
         --color--material--yellow--a400: rgb(255, 234, 0);
         --color--material--yellow--a700: rgb(255, 214, 0);
 
-        --color--bg: rgb(35, 40, 46);
-        --color--text: var(--color--bg);
+        --color--turquoise--500: rgb(51, 204, 204);
 
-        --color--layer--text: #90a4ae;
+        --color--bg: rgb(35, 40, 46);
+        --color--text: var(--color--material--blue-gray--900);
+
+        --color--layer--text: var(--color--material--blue-gray--300);
 
         --color--key--bg: var(--color--material--blue-gray--50);
         --color--key--border: white;
         --color--key--text--tap: var(--color--text);
-        --color--key--text--shifted: var(--color--material--blue-gray--400);
-        --color--key--text--hold: var(--color--layer--text);
+        --color--key--text--shifted: var(--color--material--blue-gray--500);
+        --color--key--text--hold: var(--color--material--blue-gray--500);
 
-        --color--combo--bg: rgba(87, 197, 182, 0.8);
-        --color--combo--border: var(--color--combo--bg);
-        --color--combo--dendron: var(--color--combo--bg);
-        --color--combo--text--tap: var(--color--text);
+        --color--combo--bg: rgba(84, 110, 122, 0.9);
+        --color--combo--border: var(--color--material--blue-gray--500);
+        --color--combo--dendron: var(--color--combo--border);
+        --color--combo--text--tap: var(--color--material--blue-gray--100);
         --color--combo--text--shifted: var(--color--combo--text--tap);
         --color--combo--text--hold: var(--color--combo--text--tap);
 
-        --color--trans--bg: var(--color--material--blue-gray--100);
-        --color--trans--border: var(--color--material--blue-gray--200);
-        --color--trans--text--tap: var(--color--material--blue-gray--200);
+        --color--trans--bg: var(--color--material--blue-gray--800);
+        --color--trans--border: var(--color--material--blue-gray--700);
+        --color--trans--text--tap: var(--color--material--blue-gray--600);
         --color--trans--text--shifted: var(--color--trans--text--tap);
         --color--trans--text--hold: var(--color--trans--text--tap);
 
@@ -256,7 +258,6 @@ draw_config:
         paint-order: stroke;
         fill: var(--color--layer--text);
         dominant-baseline: text-before-edge;
-
     }
 
     .shifted {
@@ -377,6 +378,32 @@ draw_config:
         translate: 0 16px;
     }
 
+    /* Backspace key */
+    :nth-child(13 of .key):not(.trans) {
+      fill: var(--color--material--red--300);
+      stroke: var(--color--material--red--200);
+    }
+    :nth-child(13 of .key):not(.trans) + .tap + .shifted {
+      fill: var(--color--key--tap);
+    }
+
+    /* Enter key */
+    :nth-child(24 of .key):not(.trans) {
+      fill: var(--color--material--teal--200);
+      stroke: var(--color--material--teal--100);
+    }
+
+    /* Outer column + thumb keys */
+     g[class^="layer-"] > :nth-child(1 of .key):not(.trans),
+     g[class^="layer-"] > :nth-child(12 of .key):not(.trans),
+     g[class^="layer-"] > :nth-child(25 of .key):not(.trans),
+     g[class^="layer-"] > :nth-child(36 of .key):not(.trans),
+     g[class^="layer-"] > :nth-child(37 of .key):not(.trans),
+     g[class^="layer-"] > :nth-child(38 of .key):not(.trans),
+     g[class^="layer-"] > g[transform] .key:not(.trans) {
+      fill: var(--color--material--blue-gray--100);
+      stroke: var(--color--material--blue-gray--50);
+    }
 
     /* Start Tabler Icons Cleanup */
     /* cannot use height/width with glyphs */
@@ -657,6 +684,7 @@ parse_config:
       align: top
     combo_bt_clear:
       align: top
+      offset: 0.03
     combo_mute:
       align: top
       offset: 0.15
