@@ -25,7 +25,7 @@ layers:
   - I
   - O
   - $$mdi:keyboard-return$$
-  - {t: Fn, h: '$$mdi:gesture-tap-hold$$'}
+  - {t: Fn, h: '$$mdi:circle-off-outline$$'}
   - {t: Z, h: '$$mdi:apple-keyboard-control$$'}
   - {t: X, h: '$$mdi:apple-keyboard-option$$'}
   - {t: C, h: '$$mdi:apple-keyboard-command$$'}
@@ -36,7 +36,7 @@ layers:
   - {t: ',', h: '$$mdi:apple-keyboard-command$$', s: <}
   - {t: ., h: '$$mdi:apple-keyboard-option$$', s: '>'}
   - {t: /, h: '$$mdi:apple-keyboard-control$$', s: '?'}
-  - {t: Fn, h: '$$mdi:gesture-tap-hold$$'}
+  - {t: Fn, h: '$$mdi:circle-off-outline$$'}
   - $$mdi:keyboard-tab$$
   - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: L2, h: '$$mdi:gesture-tap-hold$$', s: '$$mdi:alpha-w-box$$'}
@@ -82,12 +82,12 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: L1, h: '$$mdi:circle-off-outline$$', s: '$$mdi:alpha-w-box$$'}
-  - {t: L1, h: '$$mdi:circle-off-outline$$', s: '$$mdi:alpha-w-box$$'}
+  - {t: '$$mdi:circle-off-outline$$', h: L2, s: '$$mdi:alpha-w-box$$'}
+  - {t: '$$mdi:circle-off-outline$$', h: L2, s: '$$mdi:alpha-w-box$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   Fn:
-  - {t: '$$mdi:toggle-switch-variant$$', h: '$$mdi:bluetooth$$', s: '$$mdi:usb$$'}
+  - {t: '$$mdi:toggle-switch$$', h: '$$mdi:bluetooth$$', s: '$$mdi:usb$$'}
   - F1
   - F2
   - F3
@@ -111,7 +111,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:progress-download$$
-  - {t: '$$mdi:backup-restore$$', type: held}
+  - $$mdi:backup-restore$$
   - F11
   - F12
   - {t: '$$mdi:transfer$$', type: trans}
@@ -122,7 +122,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:backup-restore$$', type: held}
+  - $$mdi:backup-restore$$
   - $$mdi:brightness-7$$
   - $$mdi:brightness-5$$
   - L1

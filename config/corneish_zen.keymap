@@ -18,6 +18,8 @@
 #define base_layer(x) _base_layer(x)
 
 #define MEH LS(LC(LALT))
+// cancel caps-word, num-word and smart-mouse
+#define CANCEL &kp K_CANCEL
 
 #include "behaviors.dtsi"
 #include "macros.dtsi"
@@ -49,7 +51,7 @@
     &trans          &sk LCTRL       &sk LALT        &sk LCMD        &sk MEH         &trans              &trans          &sk MEH         &trans          &trans          &trans          &trans
 // ╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────├───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
 //                                                  36              37              38                  39              40              41
-                                                    &trans          &trans          &kp K_CANCEL        &kp K_CANCEL    &trans          &trans
+                                                    &trans          &trans          &cmo L2             &cmo L2         &trans          &trans
 //                                                 ╰───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────╯
       >;
     };

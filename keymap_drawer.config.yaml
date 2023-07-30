@@ -196,16 +196,16 @@ draw_config:
         --color--key--text--shifted: var(--color--material--blue-gray--500);
         --color--key--text--hold: var(--color--material--blue-gray--500);
 
-        --color--combo--bg: rgba(84, 110, 122, 0.9);
-        --color--combo--border: var(--color--material--blue-gray--500);
+        --color--combo--bg: var(--color--material--blue-gray--100);
+        --color--combo--border: var(--color--combo--bg);
         --color--combo--dendron: var(--color--combo--border);
-        --color--combo--text--tap: var(--color--material--blue-gray--100);
+        --color--combo--text--tap: var(--color--material--blue-gray--800);
         --color--combo--text--shifted: var(--color--combo--text--tap);
         --color--combo--text--hold: var(--color--combo--text--tap);
 
-        --color--trans--bg: var(--color--material--blue-gray--800);
-        --color--trans--border: var(--color--material--blue-gray--700);
-        --color--trans--text--tap: var(--color--material--blue-gray--600);
+        --color--trans--bg: var(--color--material--blue-gray--900);
+        --color--trans--border: var(--color--material--blue-gray--800);
+        --color--trans--text--tap: var(--color--material--blue-gray--700);
         --color--trans--text--shifted: var(--color--trans--text--tap);
         --color--trans--text--hold: var(--color--trans--text--tap);
 
@@ -430,6 +430,13 @@ parse_config:
       shifted: $$mdi:alpha-w-box$$
       tap: L2
       hold: $$mdi:gesture-tap-hold$$
+    "&csl Fn":
+      tap: Fn
+      hold: $$mdi:circle-off-outline$$
+    "&cmo L2":
+      shifted: $$mdi:alpha-w-box$$
+      tap: $$mdi:circle-off-outline$$
+      hold: L2
 
     # Modifiers
     "&caps_word": $$mdi:alpha-w-box$$
@@ -465,7 +472,7 @@ parse_config:
       hold: 5
     "&out OUT_TOG":
       shifted: $$mdi:usb$$
-      tap: $$mdi:toggle-switch-variant$$
+      tap: $$mdi:toggle-switch$$
       hold: $$mdi:bluetooth$$
 
     # Reset
@@ -664,10 +671,6 @@ parse_config:
     # System
     C_POWER: $$mdi:power-standby$$
     C_AL_LOCK: $$mdi:lock$$
-    K_CANCEL:
-      shifted: $$mdi:alpha-w-box$$
-      tap: L1
-      hold: $$mdi:circle-off-outline$$
 
     # Zoom
     RG(RS(A)):

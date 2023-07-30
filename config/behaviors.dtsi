@@ -2,9 +2,6 @@
 #define QUICK_TAP_MS 175
 #define GLOBAL_QUICK_TAP_MS 150
 
-// cancel caps-word, num-word and smart-mouse
-#define CANCEL &kp K_CANCEL
-
 &mt {
   flavor = "balanced";
   tapping-term-ms = <TAPPING_TERM_MS>;
@@ -72,6 +69,21 @@
 
 
     /*
+     - tap: &kp <PARAM_2>
+     - hold: &none
+
+     Example: &nh 0 K_CANCEL
+     */
+    /omit-if-no-ref/ nh: no_hold {
+      label = "NO_HOLD";
+      compatible = "zmk,behavior-hold-tap";
+      flavor = "balanced";
+      tapping-term-ms = <TAPPING_TERM_MS>;
+      bindings = <&none>, <&kp>;
+      #binding-cells = <2>;
+    };
+
+    /*
      - tap: sticky ctrl
      - hold: ctrl
      - double-tap: sticky meh (ctrl + tap mod-morph)
@@ -130,8 +142,8 @@
     };
 
     /*
-     - tap: next track
-     - shift + tap: prev track
+     - tap: volume up
+     - shift + tap: volume down
      */
     /omit-if-no-ref/ volume: volume {
       label = "VOLUME";
