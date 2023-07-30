@@ -2,9 +2,6 @@
 #define QUICK_TAP_MS 175
 #define GLOBAL_QUICK_TAP_MS 150
 
-// cancel caps-word, num-word and smart-mouse
-#define CANCEL &kp K_CANCEL
-
 &mt {
   flavor = "balanced";
   tapping-term-ms = <TAPPING_TERM_MS>;

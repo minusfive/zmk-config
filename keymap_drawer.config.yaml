@@ -433,10 +433,10 @@ parse_config:
     "&csl Fn":
       tap: Fn
       hold: $$mdi:circle-off-outline$$
-    "&nh 0 K_CANCEL":
+    "&cmo L2":
       shifted: $$mdi:alpha-w-box$$
-      # tap: L1
       tap: $$mdi:circle-off-outline$$
+      hold: L2
 
     # Modifiers
     "&caps_word": $$mdi:alpha-w-box$$
