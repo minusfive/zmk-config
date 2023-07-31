@@ -1,0 +1,16 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
+
+#define L1 0
+#define L2 1
+#define Fn 2
+
+#define MEH LS(LC(LALT))
+// cancel caps-word, num-word and smart-mouse
+#define CANCEL &kp K_CANCEL
+
+#include "behaviors.dtsi"
+#include "macros.dtsi"
+#include "combos.dtsi"
