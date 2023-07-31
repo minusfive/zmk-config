@@ -9,6 +9,7 @@ on:
       - "config/*.conf"
       - "config/west.yml"
       - "knucklehead/*.dtsi"
+      - "c3s/*.dtsi"
 
 jobs:
   build:

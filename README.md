@@ -1,3 +1,8 @@
+# c3s 🦍 chaosMonkey's version
+<img src="img/corne.svg" alt="c3s's keymap layout graphical representation" width="100%" />
+
+
+
 # 👊 Knucklehead
 
 Knucklehead is a mnemonic, macOS-optimized, 42[^1] key ergo columnar keyboard layout, designed[^2] to ease the transition [back-and-forth] between corne-style and Apple-style keyboards.

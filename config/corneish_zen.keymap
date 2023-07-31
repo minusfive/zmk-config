@@ -7,9 +7,9 @@
 #include "../knucklehead/base.dtsi"
 
 // Alpha layer: uncomment desired, comment the others
-#include "../knucklehead/L1_colemak-dh.dtsi"
+// #include "../knucklehead/L1_colemak-dh.dtsi"
 // #include "../knucklehead/L1_colemak.dtsi"
-// #include "../knucklehead/L1_qwerty.dtsi"
+#include "../knucklehead/L1_qwerty.dtsi"
 
 // Other layers
 #include "../knucklehead/L2.dtsi"

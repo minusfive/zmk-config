@@ -1,0 +1,11 @@
+&sl {
+    release-after-ms = <2000>;
+};
+
+
+/ {
+  behaviors {
+
+  };
+
+};

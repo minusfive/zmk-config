@@ -1,0 +1,13 @@
+// control / command
+#define CTR_CMD LC(LGUI)
+
+// command / shift / control 
+#define SFI_CTR_CMD LS(LC(LGUI))
+
+// control / command
+#define CTR_CMD LC(LGUI)
+
+// Own Layers
+#define Code 3
+
+#include "behaviors.dtsi"

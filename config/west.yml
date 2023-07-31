@@ -1,11 +1,14 @@
 manifest:
   remotes:
-    - name: urob
-      url-base: https://github.com/urob
+    - name: marzelwidmer
+      url-base: https://github.com/marzelwidmer
+
   projects:
     - name: zmk
-      remote: urob
-      revision: main
+      remote: marzelwidmer
+      revision: animated-widgets
+#      revision: niceview
+#      revision: dancer
       import: app/west.yml
   self:
     path: config

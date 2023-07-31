@@ -5,12 +5,12 @@
  */
 
 #include "../knucklehead/base.dtsi"
+#include "../c3s/base.dtsi"
 
-// Alpha layer: uncomment desired, comment the others
-#include "../knucklehead/L1_colemak-dh.dtsi"
-// #include "../knucklehead/L1_colemak.dtsi"
-// #include "../knucklehead/L1_qwerty.dtsi"
 
-// Other layers
-#include "../knucklehead/L2.dtsi"
-#include "../knucklehead/L3.dtsi"
+#include "../c3s/L0_Base_keyemap.dtsi"
+#include "../c3s/L1_Number_Navigation.dtsi"
+#include "../c3s/L2_Function.dtsi"
+
+#include "../c3s/L3_Code.dtsi"
+
