@@ -7,8 +7,23 @@ on:
       - "config/*.dtsi"
       - "config/*.conf"
       - "config/west.yml"
+      - "qwerty/*.keymap"
+      - "qwerty/*.dtsi"
+      - "qwerty/*.conf"
+      - "qwerty/west.yml"
       - "build.yaml"
 
 jobs:
-  build:
+  # Colemak-DH
+  build_colemak:
+    name: Build Colemak-DH Firmware
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    with:
+      archive_name: colemak
+  # QWERTY
+  build_qwerty:
+    name: Build QWERTY Firmware
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    with:
+      config_path: qwerty
+      archive_name: qwerty

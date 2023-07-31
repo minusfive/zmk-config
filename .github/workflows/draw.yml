@@ -4,23 +4,26 @@ name: Draw keymap
 on:
   workflow_dispatch: # can be triggered manually
   push:
-    branches: ["main"]
+    branches: ["multi-layout"]
     paths:
       - "config/*.keymap"
       - "config/*.dtsi"
+      - "qwerty/*.keymap"
       - "keymap_drawer.config.yaml"
 
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
-  group: "pages"
-  cancel-in-progress: false
+  group: "draw"
+  cancel-in-progress: true
+
+permissions:
+  contents: write
 
 jobs:
-  draw:
+  draw_colemak:
+    name: Draw Colemak
     uses: minusfive/keymap-drawer/.github/workflows/draw-zmk.yml@main
-    permissions:
-      contents: write
     with:
       install_branch: "main" # branch to install keymap-drawer from
       keymap_patterns: "config/*.keymap" # path to the keymaps to parse
@@ -28,4 +31,14 @@ jobs:
       output_folder: "img" # path to save produced SVGs
       # commit_message: "Draw: ${{ github.event.head_commit.message }}"
       amend_commit: true # whether to amend the commit or create a new one
-
+  draw_qwerty:
+    needs: draw_colemak
+    name: Draw QWERTY
+    uses: minusfive/keymap-drawer/.github/workflows/draw-zmk.yml@main
+    with:
+      install_branch: "main" # branch to install keymap-drawer from
+      keymap_patterns: "qwerty/*.keymap" # path to the keymaps to parse
+      config_path: "keymap_drawer.config.yaml" # config file, ignored if not exists
+      output_folder: "img/qwerty" # path to save produced SVGs
+      # commit_message: "Draw: ${{ github.event.head_commit.message }}"
+      amend_commit: true # whether to amend the commit or create a new one
