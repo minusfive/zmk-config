@@ -29,8 +29,8 @@ jobs:
       keymap_patterns: "config/*.keymap" # path to the keymaps to parse
       config_path: "keymap_drawer.config.yaml" # config file, ignored if not exists
       output_folder: "img" # path to save produced SVGs
-      # commit_message: "Draw: ${{ github.event.head_commit.message }}"
-      amend_commit: true # whether to amend the commit or create a new one
+      commit_message: "Draw: Colemak-DH"
+      # amend_commit: true # whether to amend the commit or create a new one
   draw_qwerty:
     needs: draw_colemak
     name: Draw QWERTY
@@ -40,5 +40,5 @@ jobs:
       keymap_patterns: "qwerty/*.keymap" # path to the keymaps to parse
       config_path: "keymap_drawer.config.yaml" # config file, ignored if not exists
       output_folder: "img/qwerty" # path to save produced SVGs
-      # commit_message: "Draw: ${{ github.event.head_commit.message }}"
-      amend_commit: true # whether to amend the commit or create a new one
+      commit_message: "Draw: QWERTY"
+      # amend_commit: true # whether to amend the commit or create a new one
