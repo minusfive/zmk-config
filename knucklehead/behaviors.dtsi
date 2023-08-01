@@ -63,10 +63,23 @@
       compatible = "zmk,behavior-hold-tap";
       flavor = "balanced";
       tapping-term-ms = <TAPPING_TERM_MS>;
-      bindings = <&mo>, <&num_word>;
+      bindings = <&mo>, <&num_dance>;
       #binding-cells = <2>;
     };
 
+    /*
+     - tap: &sl L2
+     - tap x 2: &num_word
+
+     From: https://github.com/urob/zmk-config/
+     */
+    /omit-if-no-ref/ num_dance: num_dance {
+      label = "NUM_DANCE";
+      compatible = "zmk,behavior-tap-dance";
+      tapping-term-ms = <TAPPING_TERM_MS>;
+      bindings = <&sl L2>, <&num_word>;
+      #binding-cells = <0>;
+    };
 
     /*
      - tap: &kp <PARAM_2>
