@@ -1,15 +1,25 @@
+// ZMK Core Includes
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 
+// Layers
 #define L1 0
 #define L2 1
 #define Fn 2
 
+// Meh key
 #define MEH LS(LC(LALT))
-// cancel caps-word, num-word and smart-mouse
-#define CANCEL &kp K_CANCEL
+
+// Behaviors Constants
+#define TAPPING_TERM_MS 280
+#define QUICK_TAP_MS 175
+#define GLOBAL_QUICK_TAP_MS 150
+
+// Combos Constants
+#define COMBO_TERM_DEFAULT 30
+#define COMBO_QUICK_TAP_MS 100
 
 #include "behaviors.dtsi"
 #include "macros.dtsi"

@@ -14,9 +14,3 @@
 // Other layers
 #include "../knucklehead/L2.dtsi"
 #include "../knucklehead/L3.dtsi"
-
-/ {
-  chosen {
-    zmk,matrix_transform = &default_transform;
-  };
-};

@@ -8,9 +8,6 @@
     global-quick-tap-ms = <QUICKTAP>; \
   };
 
-#define COMBO_TERM_DEFAULT 30
-#define COMBO_QUICK_TAP_MS 100
-
 / {
   combos {
     compatible = "zmk,combos";
