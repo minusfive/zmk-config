@@ -22,8 +22,8 @@ draw_config:
   inner_pad_h: 1.5
 
   # padding between layers
-  outer_pad_w: 5
-  outer_pad_h: 5
+  outer_pad_w: 0
+  outer_pad_h: 0
 
   # gap between two halves for ortho layout generator
   # split_gap: 20 # This doesn't seem to have any effect either? 🤔
@@ -69,7 +69,6 @@ draw_config:
 
     /* font and background color specifications */
     svg.keymap {
-
         /*
          * ====================
          * Theme Variables
@@ -185,7 +184,7 @@ draw_config:
 
         --color--turquoise--500: rgb(51, 204, 204);
 
-        --color--bg: rgb(35, 40, 46);
+        --color--bg: transparent;
         --color--text: var(--color--material--blue-gray--900);
 
         --color--layer--text: var(--color--material--blue-gray--300);
@@ -203,9 +202,9 @@ draw_config:
         --color--combo--text--shifted: var(--color--combo--text--tap);
         --color--combo--text--hold: var(--color--combo--text--tap);
 
-        --color--trans--bg: var(--color--bg);
-        --color--trans--border: var(--color--material--blue-gray--800);
-        --color--trans--text--tap: var(--color--material--blue-gray--700);
+        --color--trans--bg: transparent;
+        --color--trans--border: var(--color--material--blue-gray--400);
+        --color--trans--text--tap: var(--color--trans--border);
         --color--trans--text--shifted: var(--color--trans--text--tap);
         --color--trans--text--hold: var(--color--trans--text--tap);
 
@@ -239,10 +238,9 @@ draw_config:
         background-size: var(--logo-size) auto;
     }
 
-    /* default key styling */
-    .key {
-        fill: var(--color--key--bg);
-        stroke: var(--color--key--border);
+    rect,
+    path {
+      shape-rendering: geometricPrecision;
     }
 
     text {
@@ -251,7 +249,7 @@ draw_config:
         line-height: 1;
     }
 
-    /* styling for layer labels */
+    /* Layer labels */
     text.label {
         font-weight: bold;
         text-anchor: start;
@@ -260,36 +258,49 @@ draw_config:
         dominant-baseline: text-before-edge;
     }
 
-    .shifted {
-        font-size: 16px;
-        text-anchor: middle;
-        dominant-baseline: hanging;
+
+    /* Keys */
+    .key,
+    rect.combo {
+        fill: var(--color--key--bg);
+        stroke: var(--color--key--border);
     }
+    .shifted,
     .hold {
         font-size: 16px;
         text-anchor: middle;
+    }
+
+    .shifted {
+        dominant-baseline: hanging;
+    }
+    .hold {
         dominant-baseline: ideographic;
     }
 
-    .tap:not(.combo) {
+    .tap {
         fill: var(--color--key--text--tap);
     }
-    .shifted:not(.combo) {
+    .shifted {
         fill: var(--color--key--text--shifted);
     }
-    .hold:not(.combo) {
+    .hold {
         fill: var(--color--key--text--hold);
     }
 
     /*
      * Combos
      */
+    .combo {
+        --color--key--bg: var(--color--combo--bg);
+        --color--key--border: var(--color--combo--border);
+        --color--key--text--tap: var(--color--combo--text--tap);
+        --color--key--text--shifted: var(--color--combo--text--shifted);
+        --color--key--text--hold: var(--color--combo--text--hold);
+    }
     rect.combo {
-        fill: var(--color--combo--bg);
-        stroke: var(--color--combo--border);
         stroke-width: 4;
     }
-    /* dendrons */
     path.combo {
         stroke-width: 1;
         stroke: var(--color--combo--dendron);
@@ -298,75 +309,40 @@ draw_config:
     }
     .combo.tap {
         font-size: 16px;
-        fill: var(--color--combo--text--tap);
     }
     .combo.hold,
     .combo.shifted {
         font-size: 14px;
     }
-    .combo.shifted {
-        fill: var(--color--combo--text--shifted);
-    }
-    .combo.hold {
-        fill: var(--color--combo--text--hold);
-    }
-    .combo.shifted.glyph {
-      translate: 0 -2px;
-    }
 
     /*
      * Transparent, None, and Ghost Keys
      */
-
-    /*
-     * Transparent Keys
-     */
-    .key.trans {
-        fill: var(--color--trans--bg);
-        stroke: var(--color--trans--border);
+    .trans,
+    .none,
+    .ghost {
+      opacity: 0.4;
     }
-    .trans.tap {
-        fill: var(--color--trans--text--tap);
+    .trans {
+        --color--key--bg: var(--color--trans--bg);
+        --color--key--border: var(--color--trans--border);
+        --color--key--text--tap: var(--color--trans--text--tap);
+        --color--key--text--shifted: var(--color--trans--text--shifted);
+        --color--key--text--hold: var(--color--trans--text--hold);
     }
-    .trans.shifted {
-        fill: var(--color--trans--text--shifted);
+    .none {
+        --color--key--bg: var(--color--none--bg);
+        --color--key--border: var(--color--none--border);
+        --color--key--text--tap: var(--color--none--text--tap);
+        --color--key--text--shifted: var(--color--none--text--shifted);
+        --color--key--text--hold: var(--color--none--text--hold);
     }
-    .trans.hold {
-        fill: var(--color--trans--text--hold);
-    }
-
-    /*
-     * None Keys
-     */
-    .key.none {
-        fill: var(--color--none--bg);
-        stroke: var(--color--none--border);
-    }
-    .none.tap {
-        fill: var(--color--none--text--tap);
-    }
-    .none.shifted {
-        fill: var(--color--none--text--shifted);
-    }
-    .none.hold {
-        fill: var(--color--none--text--hold);
-    }
-
-    /*
-     * Ghost Keys
-     */
-    .key.ghost {
-        fill: var(--color--ghost--bg);
-        stroke: var(--color--ghost--border);
-    }
-    .ghost.tap {
-        fill: var(--color--ghost--text--tap);
-    }
-    .ghost.shifted {
-        fill: var(--color--ghost--text--shifted);
-    }
-    .ghost.hold {
-        fill: var(--color--ghost--text--hold);
+    .ghost {
+        --color--key--bg: var(--color--ghost--bg);
+        --color--key--border: var(--color--ghost--border);
+        --color--key--text--tap: var(--color--ghost--text--tap);
+        --color--key--text--shifted: var(--color--ghost--text--shifted);
+        --color--key--text--hold: var(--color--ghost--text--hold);
     }
 
 
@@ -374,49 +350,41 @@ draw_config:
      * Overrides
      */
 
-    .tap + .hold.mdi\:apple-keyboard-command + .shifted,
-    .tap + .hold.mdi\:apple-keyboard-option + .shifted {
-        translate: 0 18px;
+    .hold.mdi\:apple-keyboard-command,
+    .hold.mdi\:apple-keyboard-option {
+        + .shifted {
+            translate: 0 18px;
+        }
     }
 
     /* Backspace key */
-    :nth-child(13 of .key):not(.trans) {
-      fill: var(--color--material--red--300);
-      stroke: var(--color--material--red--200);
-    }
-    :nth-child(13 of .key):not(.trans) + .tap + .shifted {
-      fill: var(--color--key--tap);
+    .backspace,
+    .bootloader {
+        --color--key--bg: var(--color--material--red--300);
+        --color--key--border: var(--color--material--red--200);
+        --color--key--text--shifted: var(--color--key--text--tap);
     }
 
     /* Enter key */
-    :nth-child(24 of .key):not(.trans) {
-      fill: var(--color--material--teal--200);
-      stroke: var(--color--material--teal--100);
+    .enter,
+    .bootloader ~ .bootloader {
+        --color--key--bg: var(--color--material--teal--200);
+        --color--key--border: var(--color--material--teal--100);
     }
 
     /* Outer column + thumb keys */
-     g[class^="layer-"] > :nth-child(1 of .key):not(.trans),
-     g[class^="layer-"] > :nth-child(12 of .key):not(.trans),
-     g[class^="layer-"] > :nth-child(25 of .key):not(.trans),
-     g[class^="layer-"] > :nth-child(36 of .key):not(.trans),
-     g[class^="layer-"] > :nth-child(37 of .key):not(.trans),
-     g[class^="layer-"] > :nth-child(38 of .key):not(.trans),
-     g[class^="layer-"] > g[transform] .key:not(.trans) {
-      fill: var(--color--material--blue-gray--100);
-      stroke: var(--color--material--blue-gray--50);
+    g[class^="layer-"] {
+        > :nth-child(1 of .key):not(.trans),
+        > :nth-child(12 of .key):not(.trans),
+        > :nth-child(25 of .key):not(.trans),
+        > :nth-child(36 of .key):not(.trans),
+        > :nth-child(37 of .key):not(.trans),
+        > :nth-child(38 of .key):not(.trans),
+        > g[transform] .key:not(.trans) {
+            --color--key--bg: var(--color--material--blue-gray--100);
+            --color--key--border: var(--color--material--blue-gray--50);
+        }
     }
-
-    /* Start Tabler Icons Cleanup */
-    /* cannot use height/width with glyphs */
-    .icon-tabler > path {
-        fill: inherit;
-        stroke: inherit;
-    }
-    /* hide tabler's default box */
-    .icon-tabler > path[stroke="none"][fill="none"] {
-        visibility: collapse;
-    }
-    /* End Tabler Icons Cleanup */
 
 parse_config:
   mark_alternate_layer_activators: true
@@ -450,6 +418,12 @@ parse_config:
       tap: $$mdi:minus-circle-outline$$
       type: none
 
+    # Whitespace
+    "&bkspc_del":
+      type: backspace
+      tap: $$mdi:backspace$$
+      shifted: $$mdi:backspace-reverse-outline$$
+
     # Bluetooth
     "&bt BT_SEL 0":
       shifted: $$mdi:bluetooth-connect$$
@@ -480,6 +454,7 @@ parse_config:
     "&sys_reset":
       tap: $$mdi:backup-restore$$
     "&bootloader":
+      type: bootloader
       tap: $$mdi:progress-download$$
 
   # ZMK
@@ -637,13 +612,19 @@ parse_config:
     RIGHT: $$mdi:arrow-right-bold$$
 
     # Whitespace
-    ENTER: $$mdi:keyboard-return$$
+    ENTER:
+      type: enter
+      tap: $$mdi:keyboard-return$$
     ESC: $$mdi:keyboard-esc$$
     TAB: $$mdi:keyboard-tab$$
     LS(TAB): $$mdi:keyboard-tab-reverse$$
     SPACE: $$mdi:keyboard-space$$
-    BACKSPACE: $$mdi:backspace$$
-    BSPC: $$mdi:backspace$$
+    BACKSPACE:
+      type: backspace
+      tap: $$mdi:backspace$$
+    BSPC:
+      type: backspace
+      tap: $$mdi:backspace$$
     DELETE: $$mdi:backspace-reverse-outline$$
     DEL: $$mdi:backspace-reverse-outline$$
 

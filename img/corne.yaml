@@ -13,7 +13,7 @@ layers:
   - Y
   - {t: '''', s: '"'}
   - $$mdi:close-box$$
-  - {t: '$$mdi:backspace$$', s: '$$mdi:backspace-reverse-outline$$'}
+  - {t: '$$mdi:backspace$$', s: '$$mdi:backspace-reverse-outline$$', type: backspace}
   - A
   - R
   - S
@@ -24,7 +24,7 @@ layers:
   - E
   - I
   - O
-  - $$mdi:keyboard-return$$
+  - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: Fn, h: '$$mdi:close-box$$'}
   - {t: Z, h: '$$mdi:apple-keyboard-control$$'}
   - {t: X, h: '$$mdi:apple-keyboard-option$$'}
@@ -99,7 +99,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:power-standby$$
-  - $$mdi:progress-download$$
+  - {t: '$$mdi:progress-download$$', type: bootloader}
   - F6
   - F7
   - F8
@@ -110,7 +110,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:progress-download$$
+  - {t: '$$mdi:progress-download$$', type: bootloader}
   - $$mdi:backup-restore$$
   - F11
   - F12
