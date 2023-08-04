@@ -17,10 +17,9 @@
 };
 
 // mods deactivate caps-word, requires PR https://github.com/zmkfirmware/zmk/pull/1451
-&caps_word {
-  continue-list = <UNDERSCORE MINUS BSPC DEL N1 N2 N3 N4 N5 N6 N7 N8 N9 N0>;
-  // /delete-property/ ignore-modifiers;
-};
+// &caps_word {
+//   /delete-property/ ignore-modifiers;
+// };
 
 // From: https://github.com/urob/zmk-config/
 // num-word, requires PR https://github.com/zmkfirmware/zmk/pull/1451
