@@ -282,6 +282,7 @@ draw_config:
         fill: var(--color--key--text--tap);
     }
     .shifted {
+        translate: -25px 15px;
         fill: var(--color--key--text--shifted);
     }
     .hold {
@@ -312,6 +313,7 @@ draw_config:
     }
     .combo.hold,
     .combo.shifted {
+        translate: 0px 0px;
         font-size: 14px;
     }
 
@@ -350,12 +352,12 @@ draw_config:
      * Overrides
      */
 
-    .hold.mdi\:apple-keyboard-command,
+    /* .hold.mdi\:apple-keyboard-command,
     .hold.mdi\:apple-keyboard-option {
         + .shifted {
             translate: 0 18px;
         }
-    }
+    }*/
 
     /* Backspace key */
     .backspace,
