@@ -327,7 +327,7 @@ text.label {
 
 
 /* Keys */
-.key,
+rect.key,
 rect.combo {
     fill: var(--color--key--bg);
     stroke: var(--color--key--border);
@@ -425,34 +425,33 @@ path.combo {
   translate: 25px -25px;
 }
 
-/* Backspace key */
-.backspace,
-.bootloader {
+/* Outer column + thumb keys */
+.keypos-0,
+.keypos-11,
+.keypos-12,
+.keypos-23,
+.keypos-24,
+.keypos-35,
+.keypos-36,
+.keypos-37,
+.keypos-38,
+.keypos-39,
+.keypos-40,
+.keypos-41 {
+    --color--key--bg: var(--color--material--blue-gray--100);
+    --color--key--border: var(--color--material--blue-gray--50);
+}
+
+.keypos-12 {
     --color--key--bg: var(--color--material--red--300);
     --color--key--border: var(--color--material--red--200);
     --color--key--text--shifted: var(--color--key--text--tap);
     --color--key--text--hold: var(--color--key--text--tap);
 }
 
-/* Enter key */
-.enter,
-.bootloader ~ .bootloader {
+.keypos-23 {
     --color--key--bg: var(--color--material--teal--200);
     --color--key--border: var(--color--material--teal--100);
-}
-
-/* Outer column + thumb keys */
-g[class^="layer-"] {
-    > :nth-child(1 of .key):not(.trans),
-    > :nth-child(12 of .key):not(.trans),
-    > :nth-child(25 of .key):not(.trans),
-    > :nth-child(36 of .key):not(.trans),
-    > :nth-child(37 of .key):not(.trans),
-    > :nth-child(38 of .key):not(.trans),
-    > g[transform] .key:not(.trans) {
-        --color--key--bg: var(--color--material--blue-gray--100);
-        --color--key--border: var(--color--material--blue-gray--50);
-    }
 }
 </style>
 <g transform="translate(0, 0)" class="layer-L1">
