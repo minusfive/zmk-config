@@ -11,11 +11,11 @@ draw_config:
   line_spacing: 1
 
   # combo box dimensions
-  combo_w: 32
-  combo_h: 32
+  combo_w: 36
+  combo_h: 36
 
   # padding from the edge of cap to top and bottom legends
-  small_pad: 0
+  small_pad: 4
 
   # Padding between keys
   inner_pad_w: 1.5
@@ -199,7 +199,7 @@ draw_config:
         --color--combo--border: var(--color--combo--bg);
         --color--combo--dendron: var(--color--combo--border);
         --color--combo--text--tap: var(--color--material--blue-gray--800);
-        --color--combo--text--shifted: var(--color--combo--text--tap);
+        --color--combo--text--shifted: var(--color--material--blue-gray--400);
         --color--combo--text--hold: var(--color--combo--text--tap);
 
         --color--trans--bg: transparent;
@@ -265,27 +265,21 @@ draw_config:
         fill: var(--color--key--bg);
         stroke: var(--color--key--border);
     }
-    .shifted,
-    .hold {
-        font-size: 16px;
-        text-anchor: middle;
-    }
-
-    .shifted {
-        dominant-baseline: hanging;
-    }
-    .hold {
-        dominant-baseline: ideographic;
-    }
-
     .tap {
         fill: var(--color--key--text--tap);
     }
+    .shifted,
+    .hold {
+        font-size: 18px;
+        text-anchor: middle;
+    }
     .shifted {
-        translate: -25px 15px;
+        dominant-baseline: hanging;
         fill: var(--color--key--text--shifted);
+        translate: -25px 2px;
     }
     .hold {
+        dominant-baseline: ideographic;
         fill: var(--color--key--text--hold);
     }
 
@@ -300,7 +294,7 @@ draw_config:
         --color--key--text--hold: var(--color--combo--text--hold);
     }
     rect.combo {
-        stroke-width: 4;
+        stroke-width: 0;
     }
     path.combo {
         stroke-width: 1;
@@ -311,10 +305,13 @@ draw_config:
     .combo.tap {
         font-size: 16px;
     }
-    .combo.hold,
     .combo.shifted {
-        translate: 0px 0px;
-        font-size: 14px;
+        font-size: 13px;
+        translate: -9px -2px;
+    }
+    .combo.hold {
+        font-size: 16px;
+        /* translate: 2px 0px; */
     }
 
     /*
@@ -351,13 +348,15 @@ draw_config:
     /*
      * Overrides
      */
-
-    /* .hold.mdi\:apple-keyboard-command,
-    .hold.mdi\:apple-keyboard-option {
-        + .shifted {
-            translate: 0 18px;
-        }
-    }*/
+    .shifted.mdi\:alpha-w-box {
+      translate: 25px 0px;
+    }
+    .shifted.mdi\:usb {
+      translate: -25px 25px;
+    }
+    .hold.mdi\:bluetooth {
+      translate: 25px -25px;
+    }
 
     /* Backspace key */
     .backspace,
@@ -365,6 +364,7 @@ draw_config:
         --color--key--bg: var(--color--material--red--300);
         --color--key--border: var(--color--material--red--200);
         --color--key--text--shifted: var(--color--key--text--tap);
+        --color--key--text--hold: var(--color--key--text--tap);
     }
 
     /* Enter key */
@@ -404,8 +404,13 @@ parse_config:
     "&csl Fn":
       tap: Fn
       hold: $$mdi:close-box$$
+    "&csl L2":
+      tap: L2
+      hold: $$mdi:close-box$$
+    "&cmo Fn":
+      tap: $$mdi:close-box$$
+      hold: Fn
     "&cmo L2":
-      shifted: $$mdi:alpha-w-box$$
       tap: $$mdi:close-box$$
       hold: L2
 
@@ -458,6 +463,10 @@ parse_config:
     "&bootloader":
       type: bootloader
       tap: $$mdi:progress-download$$
+    "&kb_reset 0 0":
+      type: bootloader
+      tap: $$mdi:backup-restore$$
+      hold: $$mdi:progress-download$$
 
   # ZMK
   zmk_keycode_map:

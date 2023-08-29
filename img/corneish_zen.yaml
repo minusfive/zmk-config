@@ -76,14 +76,14 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:star-three-points$$', h: '$$mdi:gesture-tap-hold$$'}
+  - {t: '$$mdi:apple-keyboard-command$$', h: '$$mdi:gesture-tap-hold$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:close-box$$', h: L2, s: '$$mdi:alpha-w-box$$'}
-  - {t: '$$mdi:close-box$$', h: L2, s: '$$mdi:alpha-w-box$$'}
+  - {t: '$$mdi:close-box$$', h: L2}
+  - {t: '$$mdi:close-box$$', h: L2}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   Fn:
@@ -99,7 +99,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:power-standby$$
-  - {t: '$$mdi:progress-download$$', type: bootloader}
+  - {t: '$$mdi:backup-restore$$', h: '$$mdi:progress-download$$', type: bootloader}
   - F6
   - F7
   - F8
@@ -110,23 +110,23 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:progress-download$$', type: bootloader}
-  - $$mdi:backup-restore$$
+  - {t: '$$mdi:backup-restore$$', h: '$$mdi:progress-download$$', type: bootloader}
+  - {t: '$$mdi:close-box$$', h: Fn}
   - F11
   - F12
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:microphone$$', h: zoom}
-  - {t: '$$mdi:video$$', h: zoom}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:backup-restore$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:close-box$$', h: Fn}
   - $$mdi:brightness-7$$
   - $$mdi:brightness-5$$
-  - L1
-  - L1
+  - {t: '$$mdi:close-box$$', h: L2}
+  - {t: '$$mdi:close-box$$', h: L2}
   - $$mdi:apple-keyboard-caps$$
   - {t: '$$mdi:transfer$$', type: trans}
 combos:

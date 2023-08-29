@@ -77,6 +77,19 @@
     };
 
     /*
+     - tap: &sys_reset
+     - hold: &bootloader
+     */
+    /omit-if-no-ref/ kb_reset: kb_reset {
+      label = "kb_reset";
+      compatible = "zmk,behavior-hold-tap";
+      flavor = "balanced";
+      tapping-term-ms = <TAPPING_TERM_MS>;
+      bindings = <&bootloader>, <&sys_reset>;
+      #binding-cells = <2>;
+    };
+
+    /*
      - tap: &kp <PARAM_2>
      - hold: &none
 
