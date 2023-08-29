@@ -1046,7 +1046,6 @@ g[class^="layer-"] {
 <g transform="translate(40, 150)" class="key bootloader keypos-12">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key bootloader"/>
 <use href="#mdi:backup-restore" xlink:href="#mdi:backup-restore" x="-13" y="-13" height="26" width="26.0" class="key bootloader tap glyph mdi:backup-restore"/>
-<use href="#mdi:progress-download" xlink:href="#mdi:progress-download" x="-9" y="16" height="18" width="18.0" class="key bootloader hold glyph mdi:progress-download"/>
 </g>
 <g transform="translate(120, 150)" class="key keypos-13">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
@@ -1091,7 +1090,6 @@ g[class^="layer-"] {
 <g transform="translate(1160, 150)" class="key bootloader keypos-23">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key bootloader"/>
 <use href="#mdi:backup-restore" xlink:href="#mdi:backup-restore" x="-13" y="-13" height="26" width="26.0" class="key bootloader tap glyph mdi:backup-restore"/>
-<use href="#mdi:progress-download" xlink:href="#mdi:progress-download" x="-9" y="16" height="18" width="18.0" class="key bootloader hold glyph mdi:progress-download"/>
 </g>
 <g transform="translate(40, 230)" class="key keypos-24">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
@@ -1114,13 +1112,13 @@ g[class^="layer-"] {
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key trans"/>
 <use href="#mdi:transfer" xlink:href="#mdi:transfer" x="-13" y="-13" height="26" width="26.0" class="key trans tap glyph mdi:transfer"/>
 </g>
-<g transform="translate(440, 220)" class="key trans keypos-29">
-<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key trans"/>
-<use href="#mdi:transfer" xlink:href="#mdi:transfer" x="-13" y="-13" height="26" width="26.0" class="key trans tap glyph mdi:transfer"/>
+<g transform="translate(440, 220)" class="key keypos-29">
+<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
+<use href="#mdi:progress-download" xlink:href="#mdi:progress-download" x="-13" y="-13" height="26" width="26.0" class="key tap glyph mdi:progress-download"/>
 </g>
-<g transform="translate(760, 220)" class="key trans keypos-30">
-<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key trans"/>
-<use href="#mdi:transfer" xlink:href="#mdi:transfer" x="-13" y="-13" height="26" width="26.0" class="key trans tap glyph mdi:transfer"/>
+<g transform="translate(760, 220)" class="key keypos-30">
+<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
+<use href="#mdi:progress-download" xlink:href="#mdi:progress-download" x="-13" y="-13" height="26" width="26.0" class="key tap glyph mdi:progress-download"/>
 </g>
 <g transform="translate(840, 210)" class="key trans keypos-31">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key trans"/>

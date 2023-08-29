@@ -99,7 +99,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:power-standby$$
-  - {t: '$$mdi:backup-restore$$', h: '$$mdi:progress-download$$', type: bootloader}
+  - {t: '$$mdi:backup-restore$$', type: bootloader}
   - F6
   - F7
   - F8
@@ -110,14 +110,14 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:backup-restore$$', h: '$$mdi:progress-download$$', type: bootloader}
+  - {t: '$$mdi:backup-restore$$', type: bootloader}
   - {t: '$$mdi:close-box$$', h: Fn}
   - F11
   - F12
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:progress-download$$
+  - $$mdi:progress-download$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
