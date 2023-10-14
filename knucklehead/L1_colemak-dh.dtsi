@@ -17,7 +17,7 @@
     &bkspc_del      &kp A           &kp R           &kp S           &kp T           &kp G               &kp M           &kp N           &kp E           &kp I           &kp O           &kp ENTER
 // ├───────────────├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
 //  24              25              26              27              28              29                  30              31              32              33              34              35
-    &csl Fn         &mt LCTRL Z     &mt LALT X      &mt LCMD C      &mt MEH D       &kp V               &kp K           &mt MEH H       &mt RCMD COMMA  &mt RALT DOT   &mt RCTRL SLASH  &csl Fn
+    &csl Fn         &kp Z           &aml LCTRL X    &aml LALT C     &aml LCMD D     &aml MEH V          &amr MEH K      &amr RCMD H     &amr RALT COMMA &amr RCTRL DOT  &kp SLASH       &csl Fn
 // ╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────├───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
 //                                                  36              37              38                  39              40              41
                                                     &kp TAB         &mt LSHFT SPACE &smart_num L2 0     &smart_num L2 0 &smart_shift    &kp GRAVE
