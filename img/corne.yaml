@@ -15,26 +15,26 @@ layers:
   - $$mdi:close-box$$
   - {t: '$$mdi:backspace$$', s: '$$mdi:backspace-reverse-outline$$', type: backspace}
   - A
-  - R
-  - S
-  - T
-  - G
-  - M
-  - N
-  - E
-  - I
+  - {t: R, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: S, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: T, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: G, h: '$$mdi:star-three-points$$'}
+  - {t: M, h: '$$mdi:star-three-points$$'}
+  - {t: N, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: E, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: I, h: '$$mdi:apple-keyboard-control$$'}
   - O
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: Fn, h: '$$mdi:close-box$$'}
   - Z
-  - {t: X, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: C, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: D, h: '$$mdi:apple-keyboard-command$$'}
-  - {t: V, h: '$$mdi:star-three-points$$'}
-  - {t: K, h: '$$mdi:star-three-points$$'}
-  - {t: H, h: '$$mdi:apple-keyboard-command$$'}
-  - {t: ',', h: '$$mdi:apple-keyboard-option$$', s: <}
-  - {t: ., h: '$$mdi:apple-keyboard-control$$', s: '>'}
+  - X
+  - C
+  - D
+  - V
+  - K
+  - H
+  - {t: ',', s: <}
+  - {t: ., s: '>'}
   - {t: /, s: '?'}
   - {t: Fn, h: '$$mdi:close-box$$'}
   - $$mdi:keyboard-tab$$
