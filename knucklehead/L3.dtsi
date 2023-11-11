@@ -17,7 +17,7 @@
     &sys_reset      &kp F6          &kp F7          &kp F8          &kp F9          &kp F10             &trans          &trans          &trans          &trans          &trans          &sys_reset
 // ├───────────────├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
 //  24              25              26              27              28              29                  30              31              32              33              34              35
-    &cmo Fn         &kp F11         &kp F12         &trans          &trans          &bootloader         &bootloader     &trans          &trans          &trans          &trans          &cmo Fn
+    &cmo Fn         &kp F11         &kp F12         &sk LALT        &sk LCMD        &bootloader         &bootloader     &sk RCMD        &sk RALT        &sk RCTRL       &trans          &cmo Fn
 // ╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────├───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
 //                                                  36              37              38                  39              40              41
                                                     &kp C_BRI_DN    &kp C_BRI_UP    &cmo L2             &cmo L2         &kp CAPSLOCK    &trans
