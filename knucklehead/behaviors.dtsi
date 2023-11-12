@@ -2,14 +2,14 @@
   flavor = "balanced";
   tapping-term-ms = <TAPPING_TERM_MS>;
   quick-tap-ms = <QUICK_TAP_MS>;
-  global-quick-tap-ms = <GLOBAL_QUICK_TAP_MS>;
+  require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS>;
 };
 
 &lt {
   flavor = "balanced";
   tapping-term-ms = <TAPPING_TERM_MS>;
   quick-tap-ms = <QUICK_TAP_MS>;
-  global-quick-tap-ms = <GLOBAL_QUICK_TAP_MS>;
+  require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS>;
 };
 
 &sk {
@@ -31,6 +31,39 @@
 
 / {
   behaviors {
+    /*
+     Home Row Mods
+
+     - tap: &kp <PARAM_2>
+     - hold: &kp <PARAM_1>
+
+     Example: &aml LCMD T
+     */
+    /omit-if-no-ref/ aml: alpha_mod_left {
+      label = "ALPHA_MOD_LEFT";
+      bindings = <&kp>, <&kp>;
+      compatible = "zmk,behavior-hold-tap";
+      flavor = "balanced";
+      hold-trigger-key-positions = <KEYS_R THUMBS>;
+      hold-trigger-on-release;
+      tapping-term-ms = <TAPPING_TERM_MS>;
+      quick-tap-ms = <QUICK_TAP_MS>;
+      require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS>;
+      #binding-cells = <2>;
+    };
+    /omit-if-no-ref/ amr: alpha_mod_right {
+      label = "ALPHA_MOD_RIGHT";
+      bindings = <&kp>, <&kp>;
+      compatible = "zmk,behavior-hold-tap";
+      flavor = "balanced";
+      hold-trigger-key-positions = <KEYS_L THUMBS>;
+      hold-trigger-on-release;
+      tapping-term-ms = <TAPPING_TERM_MS>;
+      quick-tap-ms = <QUICK_TAP_MS>;
+      require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS>;
+      #binding-cells = <2>;
+    };
+
     /*
      - tap: sticky shift
      - double-tap: caps-word (shift + tap mod-morph)
