@@ -11,16 +11,16 @@
       bindings = <
 // ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮   ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
 //  0               1               2               3               4               5                   6               7               8               9               10              11
-    &kp ESC         &kp N1          &kp N2          &kp N3          &kp N4          &kp N5              &trans          &trans          &kp UP          &trans          &trans          &kp K_CANCEL
+    &kp ESC         &kp N1          &kp N2          &kp N3          &kp N4          &kp N5              &kp N6          &kp N7          &kp N8          &kp N9          &kp N0          &kp K_CANCEL
 // ├───────────────├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
 //  12              13              14              15              16              17                  18              19              20              21              22              23
-    &sk LCTRL       &kp N6          &kp N7          &kp N8          &kp N9          &kp N0              &trans          &kp LEFT        &kp DOWN        &kp RIGHT       &trans          &out OUT_TOG
+    &sk LCTRL       &trans          &trans          &trans          &trans          &trans              &trans          &kp LEFT        &kp UP          &kp RIGHT       &trans          &out OUT_TOG
 // ├───────────────├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
 //  24              25              26              27              28              29                  30              31              32              33              34              35
-    &cmo Fn         &kp LSHFT       &sk MEH         &trans          &bootloader     &trans              &trans          &bootloader     &trans          &sk MEH         &kp RSHFT       &cmo Fn
+    &cmo Fn         &kp LSHFT       &sk MEH         &trans          &bootloader     &trans              &trans          &bootloader     &kp DOWN        &sk MEH         &kp RSHFT       &cmo Fn
 // ╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────├───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
 //                                                  36              37              38                  39              40              41
-                                                    &cmo L2         &mt LALT SPACE  &mt LCMD SPACE      &mt RCMD SPACE  &mt RALT SPACE  &cmo L2
+                                                    &mt LALT SPACE  &mt LCMD SPACE  &cmo L2             &cmo L2         &mt RCMD SPACE  &mt RALT SPACE
 //                                                 ╰───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────╯
       >;
     };

@@ -20,7 +20,7 @@
     &csl Fn         &mt LSHFT Z     &mt MEH X       &kp C           &kp V           &kp B               &kp N           &kp M           &kp COMMA       &mt MEH DOT     &mt RSHFT SLASH &csl Fn
 // ╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────├───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
 //                                                  36              37              38                  39              40              41
-                                                    &smart_num L2 0 &mt LALT SPACE  &mt LCMD SPACE      &mt RCMD SPACE  &mt RALT SPACE  &smart_num L2 0
+                                                    &mt LALT SPACE  &mt LCMD SPACE  &smart_num L2 0     &smart_num L2 0 &mt RCMD SPACE  &mt RALT SPACE
 //                                                 ╰───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────╯
       >;
     };
