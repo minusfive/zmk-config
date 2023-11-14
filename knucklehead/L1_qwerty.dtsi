@@ -17,10 +17,10 @@
     &kp LCTRL       &kp A           &kp S           &kp D           &kp F           &kp G               &kp H           &kp J           &kp K           &kp L           &kp SEMI        &kp ENTER
 // ├───────────────├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
 //  24              25              26              27              28              29                  30              31              32              33              34              35
-    &csl Fn         &mt LCTRL Z     &mt LALT X      &mt LCMD C      &mt MEH V       &kp B               &kp N           &mt MEH M       &mt RCMD COMMA  &mt RALT DOT   &mt RCTRL SLASH  &csl Fn
+    &csl Fn         &mt LSHFT Z     &mt MEH X       &kp C           &kp V           &kp B               &kp N           &kp M           &kp COMMA       &mt MEH DOT     &mt RSHFT SLASH &csl Fn
 // ╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────├───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
 //                                                  36              37              38                  39              40              41
-                                                    &kp LCMD        &mt LSHFT SPACE &smart_num L2 0     &smart_num L2 0 &mt LSHFT SPACE &sk LALT
+                                                    &smart_num L2 0 &mt LALT SPACE  &mt LCMD SPACE      &mt RCMD SPACE  &mt RALT SPACE  &smart_num L2 0
 //                                                 ╰───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────╯
       >;
     };

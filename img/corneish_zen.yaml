@@ -26,23 +26,23 @@ layers:
   - {t: ;, s: ':'}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: Fn, h: '$$mdi:close-box$$'}
-  - {t: Z, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: X, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: C, h: '$$mdi:apple-keyboard-command$$'}
-  - {t: V, h: '$$mdi:star-three-points$$'}
+  - {t: Z, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: X, h: '$$mdi:star-three-points$$'}
+  - C
+  - V
   - B
   - N
-  - {t: M, h: '$$mdi:star-three-points$$'}
-  - {t: ',', h: '$$mdi:apple-keyboard-command$$', s: <}
-  - {t: ., h: '$$mdi:apple-keyboard-option$$', s: '>'}
-  - {t: /, h: '$$mdi:apple-keyboard-control$$', s: '?'}
+  - M
+  - {t: ',', s: <}
+  - {t: ., h: '$$mdi:star-three-points$$', s: '>'}
+  - {t: /, h: '$$mdi:apple-keyboard-shift$$', s: '?'}
   - {t: Fn, h: '$$mdi:close-box$$'}
-  - $$mdi:apple-keyboard-command$$
-  - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: L2, h: '$$mdi:gesture-tap-hold$$', s: '$$mdi:alpha-w-box$$'}
+  - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-option$$'}
+  - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-command$$'}
+  - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-command$$'}
+  - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-option$$'}
   - {t: L2, h: '$$mdi:gesture-tap-hold$$', s: '$$mdi:alpha-w-box$$'}
-  - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: '$$mdi:apple-keyboard-option$$', h: '$$mdi:gesture-tap-hold$$'}
   L2:
   - $$mdi:keyboard-esc$$
   - {t: '1', s: '!'}
@@ -68,24 +68,24 @@ layers:
   - $$mdi:arrow-right-bold$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:toggle-switch$$', h: '$$mdi:bluetooth$$', s: '$$mdi:usb$$'}
-  - {t: '$$mdi:apple-keyboard-option$$', h: '$$mdi:gesture-tap-hold$$'}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:progress-download$$
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:star-three-points$$', h: '$$mdi:gesture-tap-hold$$'}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:close-box$$', h: Fn}
+  - $$mdi:apple-keyboard-shift$$
   - {t: '$$mdi:star-three-points$$', h: '$$mdi:gesture-tap-hold$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:progress-download$$
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: BKLT TOG, h: '$$mdi:gesture-tap-hold$$'}
-  - $$mdi:apple-keyboard-command$$
-  - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:progress-download$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:star-three-points$$', h: '$$mdi:gesture-tap-hold$$'}
+  - $$mdi:apple-keyboard-shift$$
+  - {t: '$$mdi:close-box$$', h: Fn}
   - {t: '$$mdi:close-box$$', h: L2}
+  - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-option$$'}
+  - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-command$$'}
+  - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-command$$'}
+  - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-option$$'}
   - {t: '$$mdi:close-box$$', h: L2}
-  - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-shift$$'}
-  - $$mdi:apple-keyboard-command$$
   Fn:
   - {t: '`', s: '~'}
   - F1
@@ -112,23 +112,23 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '''', s: '"'}
   - {t: '$$mdi:close-box$$', h: Fn}
-  - F11
-  - F12
+  - {t: F11, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: F12, h: '$$mdi:star-three-points$$'}
   - $$mdi:brightness-7$$
   - $$mdi:brightness-5$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:skip-previous$$
   - $$mdi:play-pause$$
-  - $$mdi:skip-next$$
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:skip-next$$', h: '$$mdi:star-three-points$$'}
+  - $$mdi:apple-keyboard-shift$$
   - {t: '$$mdi:close-box$$', h: Fn}
-  - $$mdi:apple-keyboard-command$$
-  - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: '$$mdi:close-box$$', h: L2}
+  - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-option$$'}
+  - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-command$$'}
+  - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-command$$'}
+  - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-option$$'}
   - {t: '$$mdi:close-box$$', h: L2}
-  - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: '$$mdi:apple-keyboard-option$$', h: '$$mdi:gesture-tap-hold$$'}
 combos:
 - p: [1, 13]
   k: '!'
