@@ -281,7 +281,7 @@ draw_config:
     .hold {
         dominant-baseline: ideographic;
         fill: var(--color--key--text--hold);
-        translate: -25px 0;
+        translate: -25px 2px;
     }
 
     /*
