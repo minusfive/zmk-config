@@ -348,7 +348,7 @@ rect.combo {
 .hold {
     dominant-baseline: ideographic;
     fill: var(--color--key--text--hold);
-    translate: -25px 2px;
+    translate: -25px 4px;
 }
 
 /*
