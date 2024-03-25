@@ -281,7 +281,7 @@ draw_config:
     .hold {
         dominant-baseline: ideographic;
         fill: var(--color--key--text--hold);
-        translate: -25px -2px;
+        translate: -25px 0;
     }
 
     /*
@@ -312,7 +312,7 @@ draw_config:
     }
     .combo.hold {
         font-size: 16px;
-        /* translate: 2px 0px; */
+        translate: 0 0;
     }
 
     /*
