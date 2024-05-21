@@ -170,10 +170,10 @@ combos:
   k: {h: ;, s: ':'}
   l: ['1', '2', '3']
 - p: [6, 18]
-  k: PG UP
+  k: $$mdi:transfer-up$$
   l: ['1', '2', '3']
 - p: [18, 30]
-  k: PG DN
+  k: $$mdi:transfer-down$$
   l: ['1', '2', '3']
 - p: [19, 31]
   k: {h: '[', s: '{'}

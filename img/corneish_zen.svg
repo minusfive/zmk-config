@@ -93,6 +93,12 @@
 <svg id="mdi:transfer">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-transfer" viewBox="0 0 24 24"><path d="M8 4A2 2 0 0 0 6 6V10H8V6H16V9H13.5L17 12.5L20.5 9H18V6A2 2 0 0 0 16 4H8M3 12V14H11V12H3M3 15V17H11V15H3M13 15V17H21V15H13M3 18V20H11V18H3M13 18V20H21V18H13Z" /></svg>
 </svg>
+<svg id="mdi:transfer-down">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-transfer-down" viewBox="0 0 24 24"><path d="M16,3V5H8V3H16M16,7V9H8V7H16M16,11V13H8V11H16M5,15H19L12,22L5,15Z" /></svg>
+</svg>
+<svg id="mdi:transfer-up">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-transfer-up" viewBox="0 0 24 24"><path d="M8,21V19H16V21H8M8,17V15H16V17H8M8,13V11H16V13H8M19,9H5L12,2L19,9Z" /></svg>
+</svg>
 <svg id="mdi:usb">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-usb" viewBox="0 0 24 24"><path d="M15,7V11H16V13H13V5H15L12,1L9,5H11V13H8V10.93C8.7,10.56 9.2,9.85 9.2,9C9.2,7.78 8.21,6.8 7,6.8C5.78,6.8 4.8,7.78 4.8,9C4.8,9.85 5.3,10.56 6,10.93V13A2,2 0 0,0 8,15H11V18.05C10.29,18.41 9.8,19.15 9.8,20A2.2,2.2 0 0,0 12,22.2A2.2,2.2 0 0,0 14.2,20C14.2,19.15 13.71,18.41 13,18.05V15H16A2,2 0 0,0 18,13V11H19V7H15Z" /></svg>
 </svg>
@@ -703,15 +709,11 @@ path.combo {
 </g>
 <g class="combo combopos-13">
 <rect rx="4" ry="4" x="742" y="82" width="36" height="36" class="combo"/>
-<text x="760" y="100" class="combo tap">
-<tspan x="760" dy="-0.5em">PG</tspan><tspan x="760" dy="1.0em">UP</tspan>
-</text>
+<use href="#mdi:transfer-up" xlink:href="#mdi:transfer-up" x="747" y="87" height="26" width="26.0" class="combo tap glyph mdi:transfer-up"/>
 </g>
 <g class="combo combopos-14">
 <rect rx="4" ry="4" x="742" y="162" width="36" height="36" class="combo"/>
-<text x="760" y="180" class="combo tap">
-<tspan x="760" dy="-0.5em">PG</tspan><tspan x="760" dy="1.0em">DN</tspan>
-</text>
+<use href="#mdi:transfer-down" xlink:href="#mdi:transfer-down" x="747" y="167" height="26" width="26.0" class="combo tap glyph mdi:transfer-down"/>
 </g>
 <g class="combo combopos-15">
 <rect rx="4" ry="4" x="822" y="152" width="36" height="36" class="combo"/>
@@ -982,15 +984,11 @@ path.combo {
 </g>
 <g class="combo combopos-13">
 <rect rx="4" ry="4" x="742" y="82" width="36" height="36" class="combo"/>
-<text x="760" y="100" class="combo tap">
-<tspan x="760" dy="-0.5em">PG</tspan><tspan x="760" dy="1.0em">UP</tspan>
-</text>
+<use href="#mdi:transfer-up" xlink:href="#mdi:transfer-up" x="747" y="87" height="26" width="26.0" class="combo tap glyph mdi:transfer-up"/>
 </g>
 <g class="combo combopos-14">
 <rect rx="4" ry="4" x="742" y="162" width="36" height="36" class="combo"/>
-<text x="760" y="180" class="combo tap">
-<tspan x="760" dy="-0.5em">PG</tspan><tspan x="760" dy="1.0em">DN</tspan>
-</text>
+<use href="#mdi:transfer-down" xlink:href="#mdi:transfer-down" x="747" y="167" height="26" width="26.0" class="combo tap glyph mdi:transfer-down"/>
 </g>
 <g class="combo combopos-15">
 <rect rx="4" ry="4" x="822" y="152" width="36" height="36" class="combo"/>
@@ -1211,15 +1209,11 @@ path.combo {
 </g>
 <g class="combo combopos-3">
 <rect rx="4" ry="4" x="742" y="82" width="36" height="36" class="combo"/>
-<text x="760" y="100" class="combo tap">
-<tspan x="760" dy="-0.5em">PG</tspan><tspan x="760" dy="1.0em">UP</tspan>
-</text>
+<use href="#mdi:transfer-up" xlink:href="#mdi:transfer-up" x="747" y="87" height="26" width="26.0" class="combo tap glyph mdi:transfer-up"/>
 </g>
 <g class="combo combopos-4">
 <rect rx="4" ry="4" x="742" y="162" width="36" height="36" class="combo"/>
-<text x="760" y="180" class="combo tap">
-<tspan x="760" dy="-0.5em">PG</tspan><tspan x="760" dy="1.0em">DN</tspan>
-</text>
+<use href="#mdi:transfer-down" xlink:href="#mdi:transfer-down" x="747" y="167" height="26" width="26.0" class="combo tap glyph mdi:transfer-down"/>
 </g>
 <g class="combo combopos-5">
 <rect rx="4" ry="4" x="822" y="152" width="36" height="36" class="combo"/>
