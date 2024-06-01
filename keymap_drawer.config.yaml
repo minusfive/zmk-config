@@ -610,7 +610,7 @@ parse_config:
     RSHFT: $$mdi:apple-keyboard-shift$$
     RCMD: $$mdi:apple-keyboard-command$$
     # "Meh" key
-    LS(LC(LALT)): $$mdi:star-three-points$$
+    LS+LC+LALT: $$mdi:star-three-points$$
 
     # Arrows
     UP: $$mdi:arrow-up-bold$$

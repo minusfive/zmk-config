@@ -23,7 +23,7 @@ Knucklehead is a mnemonic, macOS-optimized, 42[^1] key ergo columnar keyboard la
 
 ![minusfive's Corne-ish Zen](img/corneish_zen.png)
 
-> Drawn with [Keymap Drawer](/caksoylar/keymap-drawer)
+> Drawn with [Keymap Drawer](https://github.com/caksoylar/keymap-drawer)
 
 ## Legend
 
