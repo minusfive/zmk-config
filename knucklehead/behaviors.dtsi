@@ -37,9 +37,9 @@
      - tap: &kp <PARAM_2>
      - hold: &kp <PARAM_1>
 
-     Example: &aml LCMD T
+     Example: &hrml LCMD T
      */
-    /omit-if-no-ref/ aml: alpha_mod_left {
+    /omit-if-no-ref/ hrml: hrm_left {
       bindings = <&kp>, <&kp>;
       compatible = "zmk,behavior-hold-tap";
       flavor = "balanced";
@@ -50,7 +50,7 @@
       require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS>;
       #binding-cells = <2>;
     };
-    /omit-if-no-ref/ amr: alpha_mod_right {
+    /omit-if-no-ref/ hrmr: hrm_right {
       bindings = <&kp>, <&kp>;
       compatible = "zmk,behavior-hold-tap";
       flavor = "balanced";
