@@ -458,8 +458,8 @@ path.combo {
     --color--key--border: var(--color--material--teal--100);
 }
 </style>
-<g transform="translate(0, 0)" class="layer-1">
-<text x="0" y="0" class="label">1</text>
+<g transform="translate(0, 0)" class="layer-L1">
+<text x="0" y="0" class="label">L1</text>
 <g transform="translate(0, 0)">
 <g transform="translate(40, 70)" class="key keypos-0">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
@@ -736,8 +736,8 @@ path.combo {
 </g>
 </g>
 </g>
-<g transform="translate(0, 392)" class="layer-2">
-<text x="0" y="0" class="label">2</text>
+<g transform="translate(0, 392)" class="layer-L2">
+<text x="0" y="0" class="label">L2</text>
 <g transform="translate(0, 0)">
 <g transform="translate(40, 70)" class="key trans keypos-0">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key trans"/>
@@ -1011,8 +1011,8 @@ path.combo {
 </g>
 </g>
 </g>
-<g transform="translate(0, 785)" class="layer-3">
-<text x="0" y="0" class="label">3</text>
+<g transform="translate(0, 785)" class="layer-L3">
+<text x="0" y="0" class="label">L3</text>
 <g transform="translate(0, 21)">
 <g transform="translate(40, 70)" class="key keypos-0">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
