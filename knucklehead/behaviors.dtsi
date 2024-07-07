@@ -40,7 +40,6 @@
      Example: &aml LCMD T
      */
     /omit-if-no-ref/ aml: alpha_mod_left {
-      label = "ALPHA_MOD_LEFT";
       bindings = <&kp>, <&kp>;
       compatible = "zmk,behavior-hold-tap";
       flavor = "balanced";
@@ -52,7 +51,6 @@
       #binding-cells = <2>;
     };
     /omit-if-no-ref/ amr: alpha_mod_right {
-      label = "ALPHA_MOD_RIGHT";
       bindings = <&kp>, <&kp>;
       compatible = "zmk,behavior-hold-tap";
       flavor = "balanced";
@@ -72,7 +70,6 @@
      From: https://github.com/urob/zmk-config/
      */
     /omit-if-no-ref/ smart_shift: smart_shift {
-      label = "SMART_SHIFT";
       compatible = "zmk,behavior-mod-morph";
       bindings = <&sk RSHFT>, <&caps_word>;
       mods = <(MOD_RSFT)>;
@@ -87,7 +84,6 @@
      From: https://github.com/urob/zmk-config/
      */
     /omit-if-no-ref/ smart_num: smart_num {
-      label = "SMART_NUM";
       compatible = "zmk,behavior-hold-tap";
       flavor = "balanced";
       tapping-term-ms = <TAPPING_TERM_MS>;
@@ -102,7 +98,6 @@
      From: https://github.com/urob/zmk-config/
      */
     /omit-if-no-ref/ num_dance: num_dance {
-      label = "NUM_DANCE";
       compatible = "zmk,behavior-tap-dance";
       tapping-term-ms = <TAPPING_TERM_MS>;
       bindings = <&sl L2>, <&num_word>;
@@ -116,7 +111,6 @@
      Example: &nh 0 K_CANCEL
      */
     /omit-if-no-ref/ nh: no_hold {
-      label = "NO_HOLD";
       compatible = "zmk,behavior-hold-tap";
       flavor = "balanced";
       tapping-term-ms = <TAPPING_TERM_MS>;
@@ -133,7 +127,6 @@
      From: https://github.com/urob/zmk-config/
      */
     /omit-if-no-ref/ ctrl_meh: ctrl_meh {
-      label = "CTRL_MEH";
       compatible = "zmk,behavior-mod-morph";
       bindings = <&sk LCTRL>, <&sk MEH>;
       mods = <(MOD_LCTL)>;
@@ -149,7 +142,6 @@
      From: https://zmk.dev/docs/behaviors/mod-morph#advanced-configuration
      */
     /omit-if-no-ref/ bkspc_del: backspace_delete {
-      label = "BACKSPACE_DELETE";
       compatible = "zmk,behavior-mod-morph";
       bindings = <&kp BACKSPACE>, <&kp DELETE>;
       mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -163,7 +155,6 @@
      - shift + hold: repeat brightness down
      */
     /omit-if-no-ref/ brightness: brightness {
-      label = "BRIGHTNESS";
       compatible = "zmk,behavior-mod-morph";
       bindings = <&kp C_BRI_UP>, <&kp C_BRI_DN>;
       mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -175,7 +166,6 @@
      - shift + tap: prev track
      */
     /omit-if-no-ref/ next_prev: next_prev {
-      label = "NEXT_PREV_TRACK";
       compatible = "zmk,behavior-mod-morph";
       bindings = <&kp C_NEXT>, <&kp C_PREV>;
       mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -187,7 +177,6 @@
      - shift + tap: volume down
      */
     /omit-if-no-ref/ volume: volume {
-      label = "VOLUME";
       compatible = "zmk,behavior-mod-morph";
       bindings = <&kp C_VOL_UP>, <&kp C_VOL_DN>;
       mods = <(MOD_LSFT|MOD_RSFT)>;
