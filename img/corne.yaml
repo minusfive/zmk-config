@@ -18,8 +18,8 @@ layers:
   - {t: R, h: '$$mdi:apple-keyboard-control$$'}
   - {t: S, h: '$$mdi:apple-keyboard-option$$'}
   - {t: T, h: '$$mdi:apple-keyboard-command$$'}
-  - {t: G, h: 'Sft+Ctl+ $$mdi:apple-keyboard-option$$'}
-  - {t: M, h: 'Sft+Ctl+ $$mdi:apple-keyboard-option$$'}
+  - {t: G, h: '$$mdi:star-three-points$$'}
+  - {t: M, h: '$$mdi:star-three-points$$'}
   - {t: N, h: '$$mdi:apple-keyboard-command$$'}
   - {t: E, h: '$$mdi:apple-keyboard-option$$'}
   - {t: I, h: '$$mdi:apple-keyboard-control$$'}
@@ -61,8 +61,8 @@ layers:
   - {t: '7', h: '$$mdi:apple-keyboard-control$$', s: '&'}
   - {t: '8', h: '$$mdi:apple-keyboard-option$$', s: '*'}
   - {t: '9', h: '$$mdi:apple-keyboard-command$$', s: (}
-  - {t: '0', h: 'Sft+Ctl+ $$mdi:apple-keyboard-option$$', s: )}
-  - {t: '$$mdi:arrow-left-bold$$', h: 'Sft+Ctl+ $$mdi:apple-keyboard-option$$'}
+  - {t: '0', h: '$$mdi:star-three-points$$', s: )}
+  - {t: '$$mdi:arrow-left-bold$$', h: '$$mdi:star-three-points$$'}
   - {t: '$$mdi:arrow-down-bold$$', h: '$$mdi:apple-keyboard-command$$'}
   - {t: '$$mdi:arrow-up-bold$$', h: '$$mdi:apple-keyboard-option$$'}
   - {t: '$$mdi:arrow-right-bold$$', h: '$$mdi:apple-keyboard-control$$'}
@@ -104,7 +104,7 @@ layers:
   - {t: F7, h: '$$mdi:apple-keyboard-control$$'}
   - {t: F8, h: '$$mdi:apple-keyboard-option$$'}
   - {t: F9, h: '$$mdi:apple-keyboard-command$$'}
-  - {t: F10, h: 'Sft+Ctl+ $$mdi:apple-keyboard-option$$'}
+  - {t: F10, h: '$$mdi:star-three-points$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
