@@ -1,3 +1,4 @@
+// ZMK Behaviors Configuration
 &mt {
   flavor = "balanced";
   tapping-term-ms = <TAPPING_TERM_MS>;
@@ -25,7 +26,6 @@
 // num-word, requires PR https://github.com/zmkfirmware/zmk/pull/1451
 // Adds arrows and shift to smart layer for more comfortable navigation/selection moves
 &num_word {
-  layers = <L2>;
   continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL RSHFT LEFT RIGHT UP DOWN>;
 };
 
@@ -100,7 +100,7 @@
     /omit-if-no-ref/ num_dance: num_dance {
       compatible = "zmk,behavior-tap-dance";
       tapping-term-ms = <TAPPING_TERM_MS>;
-      bindings = <&sl L2>, <&num_word>;
+      bindings = <&sl L2>, <&num_word L2>;
       #binding-cells = <0>;
     };
 

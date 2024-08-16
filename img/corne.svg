@@ -462,7 +462,7 @@ path.combo {
 }
 </style>
 <g transform="translate(0, 0)" class="layer-L1">
-<text x="0" y="0" class="label">L1</text>
+<text x="0" y="0" class="label" id="L1">L1</text>
 <g transform="translate(0, 0)">
 <g transform="translate(40, 70)" class="key keypos-0">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
@@ -634,14 +634,16 @@ path.combo {
 </g>
 <g transform="translate(502, 320) rotate(30.0)" class="key keypos-38">
 <rect rx="4" ry="4" x="-38" y="-58" width="77" height="117" class="key"/>
-<text x="0" y="0" class="key tap">L2</text>
-<use href="#mdi:gesture-tap-hold" xlink:href="#mdi:gesture-tap-hold" x="-9" y="36" height="18" width="18.0" class="key hold glyph mdi:gesture-tap-hold"/>
+<a href="#L2">
+<text x="0" y="0" class="key tap layer-activator">L2</text>
+</a><use href="#mdi:gesture-tap-hold" xlink:href="#mdi:gesture-tap-hold" x="-9" y="36" height="18" width="18.0" class="key hold glyph mdi:gesture-tap-hold"/>
 <use href="#mdi:alpha-w-box" xlink:href="#mdi:alpha-w-box" x="-9" y="-54" height="18" width="18.0" class="key shifted glyph mdi:alpha-w-box"/>
 </g>
 <g transform="translate(698, 320) rotate(-30.0)" class="key keypos-39">
 <rect rx="4" ry="4" x="-38" y="-58" width="77" height="117" class="key"/>
-<text x="0" y="0" class="key tap">L2</text>
-<use href="#mdi:gesture-tap-hold" xlink:href="#mdi:gesture-tap-hold" x="-9" y="36" height="18" width="18.0" class="key hold glyph mdi:gesture-tap-hold"/>
+<a href="#L2">
+<text x="0" y="0" class="key tap layer-activator">L2</text>
+</a><use href="#mdi:gesture-tap-hold" xlink:href="#mdi:gesture-tap-hold" x="-9" y="36" height="18" width="18.0" class="key hold glyph mdi:gesture-tap-hold"/>
 <use href="#mdi:alpha-w-box" xlink:href="#mdi:alpha-w-box" x="-9" y="-54" height="18" width="18.0" class="key shifted glyph mdi:alpha-w-box"/>
 </g>
 <g transform="translate(792, 304) rotate(-15.0)" class="key keypos-40">
@@ -740,7 +742,7 @@ path.combo {
 </g>
 </g>
 <g transform="translate(0, 392)" class="layer-L2">
-<text x="0" y="0" class="label">L2</text>
+<text x="0" y="0" class="label" id="L2">L2</text>
 <g transform="translate(0, 0)">
 <g transform="translate(40, 70)" class="key trans keypos-0">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key trans"/>
@@ -915,13 +917,15 @@ path.combo {
 <g transform="translate(502, 320) rotate(30.0)" class="key keypos-38">
 <rect rx="4" ry="4" x="-38" y="-58" width="77" height="117" class="key"/>
 <use href="#mdi:close-box" xlink:href="#mdi:close-box" x="-13" y="-13" height="26" width="26.0" class="key tap glyph mdi:close-box"/>
-<text x="0" y="54" class="key hold">L2</text>
-</g>
+<a href="#L2">
+<text x="0" y="54" class="key hold layer-activator">L2</text>
+</a></g>
 <g transform="translate(698, 320) rotate(-30.0)" class="key keypos-39">
 <rect rx="4" ry="4" x="-38" y="-58" width="77" height="117" class="key"/>
 <use href="#mdi:close-box" xlink:href="#mdi:close-box" x="-13" y="-13" height="26" width="26.0" class="key tap glyph mdi:close-box"/>
-<text x="0" y="54" class="key hold">L2</text>
-</g>
+<a href="#L2">
+<text x="0" y="54" class="key hold layer-activator">L2</text>
+</a></g>
 <g transform="translate(792, 304) rotate(-15.0)" class="key trans keypos-40">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key trans"/>
 <use href="#mdi:transfer" xlink:href="#mdi:transfer" x="-13" y="-13" height="26" width="26.0" class="key trans tap glyph mdi:transfer"/>
@@ -1015,7 +1019,7 @@ path.combo {
 </g>
 </g>
 <g transform="translate(0, 785)" class="layer-L3">
-<text x="0" y="0" class="label">L3</text>
+<text x="0" y="0" class="label" id="L3">L3</text>
 <g transform="translate(0, 21)">
 <g transform="translate(40, 70)" class="key keypos-0">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
@@ -1180,13 +1184,15 @@ path.combo {
 <g transform="translate(502, 320) rotate(30.0)" class="key keypos-38">
 <rect rx="4" ry="4" x="-38" y="-58" width="77" height="117" class="key"/>
 <use href="#mdi:close-box" xlink:href="#mdi:close-box" x="-13" y="-13" height="26" width="26.0" class="key tap glyph mdi:close-box"/>
-<text x="0" y="54" class="key hold">L2</text>
-</g>
+<a href="#L2">
+<text x="0" y="54" class="key hold layer-activator">L2</text>
+</a></g>
 <g transform="translate(698, 320) rotate(-30.0)" class="key keypos-39">
 <rect rx="4" ry="4" x="-38" y="-58" width="77" height="117" class="key"/>
 <use href="#mdi:close-box" xlink:href="#mdi:close-box" x="-13" y="-13" height="26" width="26.0" class="key tap glyph mdi:close-box"/>
-<text x="0" y="54" class="key hold">L2</text>
-</g>
+<a href="#L2">
+<text x="0" y="54" class="key hold layer-activator">L2</text>
+</a></g>
 <g transform="translate(792, 304) rotate(-15.0)" class="key keypos-40">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
 <use href="#mdi:apple-keyboard-caps" xlink:href="#mdi:apple-keyboard-caps" x="-13" y="-13" height="26" width="26.0" class="key tap glyph mdi:apple-keyboard-caps"/>
