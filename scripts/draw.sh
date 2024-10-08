@@ -1,4 +1,4 @@
 #!/bin/sh
 
-keymap -c ./keymap_drawer.config.yaml parse -z ./config/${1}.keymap >./img/${1}.yaml
-keymap -c ./keymap_drawer.config.yaml draw ./img/${1}.yaml >./img/${1}.svg
+keymap -c ./keymap-drawer/config.yaml parse -z ./config/${1}.keymap >./keymap-drawer/${1}.yaml
+keymap -c ./keymap-drawer/config.yaml draw ./img/${1}.yaml >./keymap-drawer/${1}.svg

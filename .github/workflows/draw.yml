@@ -8,7 +8,8 @@ on:
       - "config/*.keymap"
       - "config/*.dtsi"
       - "knucklehead/*.dtsi"
-      - "keymap_drawer.config.yaml"
+      - "keymap-drawer/config.yaml"
+      - ".github/workflows/draw.yml"
 
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
@@ -24,8 +25,8 @@ jobs:
     with:
       install_branch: "main" # branch to install keymap-drawer from
       keymap_patterns: "config/*.keymap" # path to the keymaps to parse
-      config_path: "keymap_drawer.config.yaml" # config file, ignored if not exists
-      output_folder: "img" # path to save produced SVGs
+      config_path: "keymap-drawer/config.yaml" # config file, ignored if it doesn't exist
+      output_folder: "keymap-drawer" # path to save produced SVGs
       # commit_message: "Draw: ${{ github.event.head_commit.message }}"
       amend_commit: true # whether to amend the commit or create a new one
 

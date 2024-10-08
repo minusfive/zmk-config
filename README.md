@@ -19,7 +19,7 @@ Knucklehead is a mnemonic, macOS-optimized, 42[^1] key ergo columnar keyboard la
 
 ---
 
-<img src="img/corneish_zen.svg" alt="minusfive's keymap layout graphical representation" width="100%" />
+<img src="keymap-drawer/corneish_zen.svg" alt="minusfive's keymap layout graphical representation" width="100%" />
 
 ![minusfive's Corne-ish Zen](img/corneish_zen.png)
 
@@ -253,4 +253,5 @@ To locate your firmware files...
 Your keyboard is now ready to use.
 
 [^1]: Currently 42 keys because that's what I use, but honestly sometimes I feels like I have a few keys I don't know what to do with; though I often go back to re-adding them when I try removing them, so :shrug:. May make it work for other boards in the future, but may not be a priority for a while. No promises.
+
 [^2]: Well, "designed" is perhaps too strong a word. I've haphazardly and painfully iterated over dozens of permutations, gradually removing annoyances / disruptions to my flow.
