@@ -7,9 +7,8 @@
 
 // Layers
 #define L1 0
-#define QWERTY 1
-#define L2 2
-#define Fn 3
+#define L2 1
+#define Fn 2
 
 // Meh key
 #define MEH LS(LC(LALT))

@@ -99,7 +99,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:power-standby$$
-  - {t: '&bootloader', h: '&sys_reset'}
+  - {t: '$$mdi:backup-restore$$', type: bootloader}
   - F6
   - {t: F7, h: '$$mdi:apple-keyboard-control$$'}
   - {t: F8, h: '$$mdi:apple-keyboard-option$$'}
@@ -110,14 +110,14 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '&bootloader', h: '&sys_reset'}
+  - {t: '$$mdi:backup-restore$$', type: bootloader}
   - {t: '$$mdi:close-box$$', h: Fn}
   - F11
   - F12
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:progress-download$$
+  - $$mdi:progress-download$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
