@@ -32,13 +32,13 @@
 / {
   behaviors {
     /*
-     Home Row Mods
+    Home Row Mods
 
-     - tap: &kp <PARAM_2>
-     - hold: &kp <PARAM_1>
+    - tap: &kp <PARAM_2>
+    - hold: &kp <PARAM_1>
 
-     Example: &hrml LCMD T
-     */
+    Example: &hrml LCMD T
+    */
     /omit-if-no-ref/ hrml: hrm_left {
       bindings = <&kp>, <&kp>;
       compatible = "zmk,behavior-hold-tap";
@@ -63,12 +63,12 @@
     };
 
     /*
-     - tap: sticky shift
-     - double-tap: caps-word (shift + tap mod-morph)
-     - hold: shift
+    - tap: sticky shift
+    - double-tap: caps-word (shift + tap mod-morph)
+    - hold: shift
 
-     From: https://github.com/urob/zmk-config/
-     */
+    From: https://github.com/urob/zmk-config/
+    */
     /omit-if-no-ref/ smart_shift: smart_shift {
       compatible = "zmk,behavior-mod-morph";
       bindings = <&sk RSHFT>, <&caps_word>;
@@ -78,11 +78,11 @@
 
 
     /*
-     - tap: num-word
-     - hold: &mo layer
+    - tap: num-word
+    - hold: &mo layer
 
-     From: https://github.com/urob/zmk-config/
-     */
+    From: https://github.com/urob/zmk-config/
+    */
     /omit-if-no-ref/ smart_num: smart_num {
       compatible = "zmk,behavior-hold-tap";
       flavor = "balanced";
@@ -92,11 +92,11 @@
     };
 
     /*
-     - tap: &sl L2
-     - tap x 2: &num_word
+    - tap: &sl L2
+    - tap x 2: &num_word
 
-     From: https://github.com/urob/zmk-config/
-     */
+    From: https://github.com/urob/zmk-config/
+    */
     /omit-if-no-ref/ num_dance: num_dance {
       compatible = "zmk,behavior-tap-dance";
       tapping-term-ms = <TAPPING_TERM_MS>;
@@ -105,11 +105,11 @@
     };
 
     /*
-     - tap: &kp <PARAM_2>
-     - hold: &none
+    - tap: &kp <PARAM_2>
+    - hold: &none
 
-     Example: &nh 0 K_CANCEL
-     */
+    Example: &nh 0 K_CANCEL
+    */
     /omit-if-no-ref/ nh: no_hold {
       compatible = "zmk,behavior-hold-tap";
       flavor = "balanced";
@@ -119,13 +119,13 @@
     };
 
     /*
-     - tap: sticky ctrl
-     - hold: ctrl
-     - double-tap: sticky meh (ctrl + tap mod-morph)
-     - tap + hold: meh (ctrl + hold mod-morph)
+    - tap: sticky ctrl
+    - hold: ctrl
+    - double-tap: sticky meh (ctrl + tap mod-morph)
+    - tap + hold: meh (ctrl + hold mod-morph)
 
-     From: https://github.com/urob/zmk-config/
-     */
+    From: https://github.com/urob/zmk-config/
+    */
     /omit-if-no-ref/ ctrl_meh: ctrl_meh {
       compatible = "zmk,behavior-mod-morph";
       bindings = <&sk LCTRL>, <&sk MEH>;
@@ -134,13 +134,13 @@
     };
 
     /*
-     - tap: backspace
-     - hold: repeat backspace
-     - shift + tap: delete
-     - shift + hold: repeat delete
+    - tap: backspace
+    - hold: repeat backspace
+    - shift + tap: delete
+    - shift + hold: repeat delete
 
-     From: https://zmk.dev/docs/behaviors/mod-morph#advanced-configuration
-     */
+    From: https://zmk.dev/docs/behaviors/mod-morph#advanced-configuration
+    */
     /omit-if-no-ref/ bkspc_del: backspace_delete {
       compatible = "zmk,behavior-mod-morph";
       bindings = <&kp BACKSPACE>, <&kp DELETE>;
@@ -149,11 +149,11 @@
     };
 
     /*
-     - tap: brightness up
-     - hold: repeat brightness up
-     - shift + tap: brightness down
-     - shift + hold: repeat brightness down
-     */
+    - tap: brightness up
+    - hold: repeat brightness up
+    - shift + tap: brightness down
+    - shift + hold: repeat brightness down
+    */
     /omit-if-no-ref/ brightness: brightness {
       compatible = "zmk,behavior-mod-morph";
       bindings = <&kp C_BRI_UP>, <&kp C_BRI_DN>;
@@ -162,9 +162,9 @@
     };
 
     /*
-     - tap: next track
-     - shift + tap: prev track
-     */
+    - tap: next track
+    - shift + tap: prev track
+    */
     /omit-if-no-ref/ next_prev: next_prev {
       compatible = "zmk,behavior-mod-morph";
       bindings = <&kp C_NEXT>, <&kp C_PREV>;
@@ -173,9 +173,9 @@
     };
 
     /*
-     - tap: volume up
-     - shift + tap: volume down
-     */
+    - tap: volume up
+    - shift + tap: volume down
+    */
     /omit-if-no-ref/ volume: volume {
       compatible = "zmk,behavior-mod-morph";
       bindings = <&kp C_VOL_UP>, <&kp C_VOL_DN>;
