@@ -25,6 +25,8 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: urob
       url-base: https://github.com/urob
+    - name: caksoylar
+      url-base: https://github.com/caksoylar
 
   projects:
     - name: zmk-auto-layer
@@ -32,8 +34,8 @@ manifest:
       revision: main
       path: modules/auto-layer
     - name: zmk-tri-state
-      remote: urob
-      revision: main
+      remote: caksoylar
+      revision: split-locality
       path: modules/tri-state
 
     # ZMK with Zephyr namespaced under /zmk. This requires that ZMK imports
