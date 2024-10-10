@@ -6,7 +6,7 @@ Knucklehead[^1] is a mnemonic, macOS-optimized, 42 key ergonomic columnar layout
 > Under **_active development_**. Expect breaking changes and scarce/incomplete documentation.
 
 > [!IMPORTANT]\
-> [Home Row Mods](#timer-less-home-row-mods) are now enabled by default. To use the previous version, switch to the [legacy branch](/minusfive/zmk-config/tree/legacy).
+> [Home Row Mods](#timer-less-home-row-mods) are now enabled by default. To use the previous version, switch to the [legacy branch](https://github.com/minusfive/zmk-config/tree/legacy).
 
 ## [![Build ZMK firmware](https://github.com/minusfive/zmk-config/actions/workflows/build.yml/badge.svg)](https://github.com/minusfive/zmk-config/actions/workflows/build.yml)
 
