@@ -32,6 +32,37 @@
 / {
   behaviors {
     /*
+    Home Row Mods
+
+    - tap: &kp <PARAM_2>
+    - hold: &kp <PARAM_1>
+
+    Example: &hrml LCMD T
+    */
+    /omit-if-no-ref/ hrml: hrm_left {
+      bindings = <&kp>, <&kp>;
+      compatible = "zmk,behavior-hold-tap";
+      flavor = "balanced";
+      hold-trigger-key-positions = <KEYS_R THUMBS>;
+      hold-trigger-on-release;
+      tapping-term-ms = <TAPPING_TERM_MS>;
+      quick-tap-ms = <QUICK_TAP_MS>;
+      require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS>;
+      #binding-cells = <2>;
+    };
+    /omit-if-no-ref/ hrmr: hrm_right {
+      bindings = <&kp>, <&kp>;
+      compatible = "zmk,behavior-hold-tap";
+      flavor = "balanced";
+      hold-trigger-key-positions = <KEYS_L THUMBS>;
+      hold-trigger-on-release;
+      tapping-term-ms = <TAPPING_TERM_MS>;
+      quick-tap-ms = <QUICK_TAP_MS>;
+      require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS>;
+      #binding-cells = <2>;
+    };
+
+    /*
     - tap: sticky shift
     - double-tap: caps-word (shift + tap mod-morph)
     - hold: shift

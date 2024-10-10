@@ -1,111 +1,116 @@
 # 👊 Knucklehead
 
-Knucklehead is a mnemonic, macOS-optimized, 42[^1] key ergo columnar keyboard layout, designed[^2] to ease the transition [back-and-forth] between corne-style and Apple-style keyboards.
-
----
+Knucklehead[^1] is a mnemonic, macOS-optimized, 42 key ergonomic columnar layout for [corne-style split keyboards](https://github.com/foostan/crkbd), designed[^2] to ease the transition from standard ANSI Apple-style keyboards.
 
 > [!WARNING]\
-> Under **_active development_**, expect changes. Scarce/incomplete documentation. Use at your own risk.
+> Under **_active development_**. Expect breaking changes and scarce/incomplete documentation.
 
-> [!NOTE]\
-> This layout was primarily **designed for [Colemak-DH](https://colemakmods.github.io/mod-dh/)** and influenced by decades of muscle memory using ANSI Apple keyboards.
->
-> By request I've started working on other alpha layouts, such as:
->
-> - [QWERTY](/minusfive/zmk-config/tree/QWERTY)
-> - [Colemak](/minusfive/zmk-config/tree/Colemak)
->
-> But keep in mind that while many of the mnemonic affordances will work well regardless of layout, many others will be "lost in translation".
+> [!IMPORTANT]\
+> [Home Row Mods](#timer-less-home-row-mods) are now enabled by default. To use the previous version, switch to the [legacy branch](/minusfive/zmk-config/tree/legacy).
 
----
+## [![Build ZMK firmware](https://github.com/minusfive/zmk-config/actions/workflows/build.yml/badge.svg)](https://github.com/minusfive/zmk-config/actions/workflows/build.yml)
 
 <img src="./keymap-drawer/corneish_zen.svg" alt="minusfive's keymap layout graphical representation" width="100%" />
 
 ![minusfive's Corne-ish Zen](img/corneish_zen.png)
 
-> Drawn with [Keymap Drawer](/caksoylar/keymap-drawer)
+> Drawn with [@caksoylar's Keymap Drawer](https://github.com/caksoylar/keymap-drawer)
 
 ## Legend
 
-| Symbol | Key Name                                                      |
-| :----: | ------------------------------------------------------------- |
-|   ⌃    | Control                                                       |
-|   ⌥    | Option                                                        |
-|   ⌘    | Command                                                       |
-|   ⇧    | Shift                                                         |
-|   ⇪    | Caps Lock                                                     |
-|   ▲    | ⌃⌥⇧ at once (a.k.a. "Meh")                                    |
-|   ⌫    | Backspace                                                     |
-|   ⌦    | Delete                                                        |
-|   ⏎    | Return                                                        |
-|   ⇥    | Tab                                                           |
-|   ␣    | Space                                                         |
-|  `w`   | [Smart `w`ord behavior](#smart-word-behaviors)                |
-|  `×`   | [E`x`it smart `w`ord behavior](#exiting-smart-word-behaviors) |
-|  `L1`  | Layer 1                                                       |
-|  `L2`  | Layer 2                                                       |
-|  `Fn`  | Function Layer                                                |
-
-<!--  | ⌽         | power       | -->
-<!--  | ⏏         | eject       | -->
-<!--  | ⌤         | enter       | -->
-<!--  | ⇭         | num lock    | -->
-<!--  | ⇱         | home        | -->
-<!--  | ⇲         | end         | -->
-<!--  | ⇞         | page up     | -->
-<!--  | ⇟         | page down   | -->
-<!--  | ↑         | up arrow    | -->
-<!--  | ⇡         | up arrow    | -->
-<!--  | ↓         | down arrow  | -->
-<!--  | ⇣         | down arrow  | -->
-<!--  | ←         | left arrow  | -->
-<!--  | ⇠         | left arrow  | -->
-<!--  | →         | right arrow | -->
-<!--  | ⇢         | right arrow | -->
-<!--  | ⌧         | clear       | -->
+| Symbol | Key Name                                     | Symbol | Key Name                                                  |
+| :----: | -------------------------------------------- | :----: | --------------------------------------------------------- |
+|   🆆    | [Smart 🆆ord behavior](#smart-🆆ord-behaviors) |   🆇    | [E🆇it smart 🆆ord behavior](#e🆇iting-smart-🆆ord-behaviors) |
+|   ⌃    | Control                                      |   ⇥    | Tab                                                       |
+|   ⌥    | Option                                       |   ␣    | Space                                                     |
+|   ⌘    | Command                                      |   ⇡    | Page Up                                                   |
+|   ▲    | Meh (⌃ + ⌥ + ⇧)                              |   ⇣    | Page Down                                                 |
+|   ⇧    | Shift                                        |   ⛭    | Brightness Up                                             |
+|   ⇪    | Caps Lock                                    |   ⛯    | Brightness Down                                           |
+|   ⌫    | Backspace                                    |   ⟲    | Firmware reset (hold: bootloader mode)                    |
+|   ⌦    | Delete                                       |  `L1`  | Layer 1                                                   |
+|   ⏎    | Return                                       |  `L2`  | Layer 2                                                   |
+|   ⏻    | Power                                        |  `Fn`  | Function Layer                                            |
 
 ## Features
 
 ### Mnemonic Affordances
 
-> [!IMPORTANT]\
-> These are in the context of the (default) Colemak-DH layout.
-> Many will be lost in translation when using other alpha layouts.
+> [!NOTE]\
+> These are **optimized for the [Colemak-DH](https://colemakmods.github.io/mod-dh/)** layout. While many will work well regardless of layout, others will be "lost in translation".
+>
+> [Other layouts available](#using-layouts-other-than-colemak-dh):
+>
+> - [QWERTY](./knucklehead/L1_qwerty.dtsi)
+> - [Colemak](./knucklehead/L1_colemak.dtsi)
+>
+> See: [Using layouts other than Colemak-DH](#using-layouts-other-than-colemak-dh)
 
 <!-- &nbsp;s force column width and prevent unwanted breaks -->
 
-| Key&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Cue&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Mnemonic&nbsp;Affordance(s)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                                                                  |
-| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **⌘**                                                                                                                 | `C` or `,`                                                                                                                              | `C`ommand, `Comma`nd                                                                                                                                                                                           |
-| **⌥**                                                                                                                 | `X`                                                                                                                                     | shape similarity                                                                                                                                                                                               |
-| **⌃**                                                                                                                 | `A`                                                                                                                                     | shape similarity, proximity                                                                                                                                                                                    |
-| **^**                                                                                                                 | `A + Z`                                                                                                                                 | (Caret) shape similarity, proximity                                                                                                                                                                            |
-| **⇥**                                                                                                                 | **␣** or **⌘**                                                                                                                          | space multiplier, proximity; also near **⌘** which is combined with for app switching                                                                                                                          |
-| `` ` ~ ``                                                                                                             | `H`, **⇥** or **⌘**                                                                                                                     | `~` a.k.a. "home" directory on 'nix systems; proximity. Same position, opposite hand as **⇥**, typically found near each other on Apple keyboards; also near **⌘** which is combined with for window switching |
-| `- _`                                                                                                                 | `N + L`                                                                                                                                 | `N`egative, `L`ow                                                                                                                                                                                              |
-| `= +`                                                                                                                 | `E + U`                                                                                                                                 | `E`quals, `U`p (`+`)                                                                                                                                                                                           |
-| `[ {`                                                                                                                 | `N + H`                                                                                                                                 | proximity; used to define a `N`ew `H`ash table/map on many programming languages; adjacent to `] }`                                                                                                            |
-| `] }`                                                                                                                 | `E + ,`                                                                                                                                 | proximity; used to `E`nd hash tables/maps on many programming languages; `,` is also typically used to delimit items within hash tables/maps; adjacent to `[ {`                                                |
-| `\ \|`                                                                                                                | `I + .` or `/ ?`                                                                                                                        | shape similarity, proximity; logical `OR` — same position, opposite hand as `&` (logical `AND`)                                                                                                                |
-| `&`                                                                                                                   | `R + X`                                                                                                                                 | shape similarity; logical `AND` — same position, opposite hand as `\|` (logical `OR`)                                                                                                                          |
-| `*`                                                                                                                   | `S + C`                                                                                                                                 | `S`tar, wild `C`ard                                                                                                                                                                                            |
-| **⇪**                                                                                                                 | **⇧**                                                                                                                                   | same position as ⇧ (shift), but on `Fn` layer                                                                                                                                                                  |
-| `! @ # $ %`<br/>`^ & * ( )`                                                                                           | `1 2 3 4 5`<br/>`6 7 8 9 0`                                                                                                             | symbols maintain their standard ANSI association with numbers as laid-out on `L2`, replicated as combos on `L1` and `L2`                                                                                       |
-| `-_  =+`<br/>`[{  ]}  \|\`                                                                                            | Apple ANSI position                                                                                                                     | this key cluster retains their order/position relative to each other on Apple keyboards, but is to vertical combos more easily accessible to stronger fingers.                                                 |
-| `Fn`&nbsp;**⌃**&nbsp;**⌥**&nbsp;**⌘**<br/>**⌘**&nbsp;**⌥**&nbsp;**⌃**&nbsp;`Fn`                                       | Apple ANSI position                                                                                                                     | `Fn` and modifiers cluster retains their familiar Apple keyboard lower left corner (mirrored on the right) relative position and order                                                                         |
+| Key&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Cue&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Mnemonic&nbsp;Affordance(s)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                        |
+| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **⇥** (Tab)                                                                                                           | **␣** (Space)                                                                                                                           | Tab as a space multiplier; proximity.                                                                                                                                |
+| `` ` ~ ``                                                                                                             | `H`, **⇥** (Tab)                                                                                                                        | `~` a.k.a. "`H`ome" directory on 'nix systems; proximity. Same position, opposite hand as **⇥** (Tab), typically adjacent on Apple keyboards.                        |
+| `- _`                                                                                                                 | `N + L`                                                                                                                                 | `N`egative, `L`ow; adjacent to `= +`                                                                                                                                 |
+| `= +`                                                                                                                 | `E + U`                                                                                                                                 | `E`quals, `U`p (`+`); adjacent to `- _`                                                                                                                              |
+| `[ {`                                                                                                                 | `N + H`                                                                                                                                 | Proximity; used to define a `N`ew `H`ash table/map on many programming languages; adjacent to `] }`                                                                  |
+| `] }`                                                                                                                 | `E + ,`                                                                                                                                 | Proximity; used to `E`nd hash tables/maps on many programming languages; `,` is also typically used to delimit items within hash tables/maps; adjacent to `[ {`      |
+| `-_  =+`<br/>`[{  ]}  \|\`                                                                                            | Apple ANSI position                                                                                                                     | This key cluster retains their order/position relative to each other as on Apple keyboards, but moved to vertical combos more easily accessible to stronger fingers. |
+| `\| \`                                                                                                                | `I + .` or `/ ?`                                                                                                                        | Shape similarity, proximity; logical `OR` — same position, opposite hand as `&` (logical `AND`)                                                                      |
+| `&`                                                                                                                   | `R + X`                                                                                                                                 | Shape similarity; logical `AND` — same position, opposite hand as `\|` (logical `OR`)                                                                                |
+| `*`                                                                                                                   | `S + C`                                                                                                                                 | `S`tar, wild `C`ard                                                                                                                                                  |
+| **⇪** (Caps Lock)                                                                                                     | **⇧** (Shift)                                                                                                                           | Same position as ⇧ (shift), but on `Fn` layer                                                                                                                        |
+| `! @ # $ %`<br/>`^ & * ( )`                                                                                           | `1 2 3 4 5`<br/>`6 7 8 9 0`                                                                                                             | Symbols maintain their standard ANSI association with numbers as laid-out on `L2`, replicated as combos on `L1` and `L2`                                             |
+| `Fn`                                                                                                                  | Apple ANSI position                                                                                                                     | `Fn` keys retains their familiar lower left corner position, mirrored on the right.                                                                                  |
+
+### Other Associative Affordances
+
+Keys are repositioned in clusters to either "familiar" relative positions, or otherwise logical ones, using ANSI Apple keyboards as a reference, e.g.:
+
+- Arrow keys are placed on `Layer 2` in traditional `VIM + QWERTY` positions.
+- `;:` is accessible as a combo on a stronger finger, but retains its own relative position to the `'"` key.
+- `1–5` numbers retain their familiar "left, upper-row" position on `Layer 2`, while `6–0` are positioned in the next row below. This not only feels natural for single handed numeric typing, but also moves the most used symbols [for programming] to more accessible positions.
+- `Fn` keys are aligned with their corresponding numeric positions on `Layer 2`.
+- Bluetooth profile selector combos on the `Fn` layer are aligned with their corresponding numeric positions.
+- Media keys retain almost their relative position, except they're re-arranged a bit so:
+  - `volume up / down` align with `+ / -` and `Up / Down` arrows, and `U` ("up") and `L` ("low") keys.
+  - `back / forward` align with `Left / Right` arrows.
 
 ---
 
-### Smart `w`ord Behaviors
+### Static, Associative Key Placement
+
+This layout aims to keep keys (and combos) in the same place across layers, and to strike a balance between comfort and intuitiveness.
+Layers may enhance that key's functionality, or replace it with another key, but that key itself won't move to a different location.
+
+When a key is replaced on upper layers, an associative mnemonic is used to make it easier to orientate yourself in the new layer (e.g. `Fn` keys are placed in the same positions as their corresponding numbers on `Layer 2`).
+
+On upper layers unused keys are "[transparent](https://zmk.dev/docs/behaviors/misc#transparent)", so events flow down to (and are activated on) the base layer, and thus the base layer's key placement is preserved.
+
+Together with the [single base layer](#single-base-layer) and [upper layer swapping](#upper-layer-swapping), these principles of static, associative key placement aim to make the [modal nature of layers](<https://en.wikipedia.org/wiki/Modality_(human–computer_interaction)>) more intuitive and predictable, enabling faster development of muscle memory.
+
+---
+
+### Timer-less Home Row Mods
+
+By using [@urob's Timer-less](https://github.com/urob/zmk-config?tab=readme-ov-file#timeless-homerow-mods) [Home Row Mods](https://precondition.github.io/home-row-mods), modifier keys (`⌃`, `⌥`, `⌘`, `▲`) can be activated by holding keys in the "home row", consistently across layers, without interfering with normal typing (i.e. without the need to tap a key within a certain time window).
+
+> [!NOTE]\
+> To hold-repeat a key in the home row (or any other dual-purpose key), simply tap it twice and hold.
+
+---
+
+### Smart 🆆ord Behaviors
 
 A smart word behavior is one where, to perform an action for which you would normally `hold` a key, you're only required to `tap` it at the beginning of a sequence to "enter" that special mode, and you remain in that mode until you press a key not in the defined "continue-list" (a "break-word" key, like **␣** [space]), **_or_** until you explicitly "exit" that mode.
 
 The most common example of this type of behavior is [ZMK's `&caps_word`](https://zmk.dev/docs/behaviors/caps-word) (or [QMK's](https://docs.qmk.fm/#/feature_caps_word)).
 
-This layout uses 2 smart word behaviors (marked with the `w` symbol):
+This layout uses 2 smart word behaviors (marked with the 🆆 symbol):
 
-> [!IMPORTANT]\
-> Both of these were taken from [@urob's fantastic layout](/urob/zmk-config), and use his [ZMK fork](/urob/zmk) which include a couple of (popular, but yet-to-be-merged) PRs to ZMK necessary for this to work.
+> [!NOTE]\
+> Both of these were taken from [@urob's fantastic layout](/urob/zmk-config).
 
 #### Smart Shift
 
@@ -128,18 +133,18 @@ Both inner thumbs (marked as `L2` on `L1`) will act as follows:
 | `tap`                                                                                | [Sticky layer behavior](https://zmk.dev/docs/behaviors/sticky-layer), i.e. will switch to `L2` until the next key pressed (within 1s), and immediately exit back to `L1`. Useful to use single-handed sticky modifiers, entering a single number, single arrow movements, single media key actions, etc. |
 | `double-tap`                                                                         | Stays on `L2` while numbers, arrows, `, . / - _ + = *`, ⌫ or ⌦ are pressed. Useful when entering longer numeric sequences, math operations, repetitive arrow navigation, etc.                                                                                                                            |
 
-#### E`x`iting Smart `w`ord Behaviors
+#### E🆇iting Smart 🆆ord Behaviors
 
-Sometimes you may enter a smart behavior by accident, or may need to cancel it to accommodate special use cases. For these situations there are special "cancel" keys, marked with an `x`:
+Sometimes you may enter a smart behavior by accident, or may need to cancel it to accommodate special use cases. For these situations there are special "cancel" keys, marked with an 🆇:
 
-On `L1` the right-most `x` key (top row, right hand) — and since on `L2` that key position is "[transparent](https://zmk.dev/docs/behaviors/misc#transparent)", it's essentially the same key on that layer — will cancel any smart word behavior (i.e. it will exit `&caps_word`, and/or exit `L2`'s smart layer behavior and bump you back to `L1`).
+On `L1` the right-most 🆇 key (top row, right hand) — and since on `L2` that key position is "[transparent](https://zmk.dev/docs/behaviors/misc#transparent)", it's essentially the same key on that layer — will cancel any smart word behavior (i.e. it will exit `&caps_word`, and/or exit `L2`'s smart layer behavior and bump you back to `L1`).
 It's positioned to mirror the traditional `ESC` key since it's another type of "escape".
 
 On `L2` the same thumb keys you use to summon it will act as follows:
 
 | Action&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Effect                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | ------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `tap`                                                                                | Will exit the smart layer behavior and bump you back to `L1`. (It will also cancel `&caps_word`, so it can be used for that as well; from `L1` this would technically be a `triple-tap`, so the top-right `x` key is more convenient)                                                                                                                                                                                                                            |
+| `tap`                                                                                | Will exit the smart layer behavior and bump you back to `L1`. (It will also cancel `&caps_word`, so it can be used for that as well; from `L1` this would technically be a `triple-tap`, so the top-right 🆇 key is more convenient)                                                                                                                                                                                                                              |
 | `hold`                                                                               | Will also exit the smart layer behavior, but will immediately enter the normal [`&mo` "momentary layer"](https://zmk.dev/docs/behaviors/layers#momentary-layer) behavior as well and remain on `L2`, so as long as you keep holding it you shouldn't see a difference, but as soon as you let go you'll be bumped back to `L1`.<br/><br/>I implemented this to account for accidental "muscle memory" hold actions, making it more forgiving and less confusing. |
 
 ---
@@ -161,57 +166,31 @@ Since the aim of this keymap is to meet newcomers half-way (specifically those t
 
 #### Upper Layer Swapping
 
-Additionally, in order to prevent even momentary layer stacking, a "cancel" (`x`) event is triggered in some circumstances prior to switching to a layer, so that you're first bumped back down to `L1` before switching to the desired layer.
+Additionally, in order to prevent even momentary layer stacking, a "cancel" (🆇) event is triggered in some circumstances prior to switching to a layer, so that you're first bumped back down to `L1` before switching to the desired layer.
 This all happens transparently without delay, so from your perspective you just "swapped" upper layers, instead of stacking them.
 This ensures any transparent keys in that upper layer will fall through to `L1`, and sticky timeouts will bump you back to `L1` immediately, as you would expect.
-These special cases are marked with the same `x` symbol.
+These special cases are marked with the same 🆇 symbol.
 
 **Without this behavior**, for example, it might've been confusing if you pressed the `Fn` key while on `L2`'s smart layer mode, and pressed a transparent key expecting an `L1` keycode when instead you get an `L2`.
 
-#### Static Key Placement
-
-This layout also aims to keep keys in the same place across layers.
-Layers may change/enhance that key's functionality, or replace it with another key, but that key itself won't move to a different location.
-On upper layers unused keys are "[transparent](https://zmk.dev/docs/behaviors/misc#transparent)", so events flow down to (and are activated on) the base layer.
-
-Together with the [single base layer](#single-base-layer) and [upper layer swapping](#upper-layer-swapping), static key placement aims to make layers more intuitive and predictable.
-
 ---
 
-### Other Features
+## Using layouts other than Colemak-DH
 
-Keys are repositioned in clusters to either "familiar" relative positions, or otherwise logical ones, using ANSI Apple keyboards as a reference, e.g.
+In order to use layouts other than the default [Colemak-DH](https://colemakmods.github.io/mod-dh/) layout, you'll need to comment-out the `#include "L1_colemak-dh.dtsi"` statement in [./knucklehead/base.dtsi](./knucklehead/base.dtsi), and uncomment the corresponding layout file you wish to use. E.g.:
 
-- `;:` is accessible as a combo on a stronger finger, but retains its own relative position to the `'"` key.
-- `1–5` numbers retain their familiar "left, upper-row" position on `Layer 2`
-- `6–0` are right below `1–5` on `Layer 2`'s left hand home-row. This not only feels natural for single handed numeric typing, but also moves the most used symbols [for programming] to more accessible positions.
-- `Fn`, `Control`, `Option` and `Command` keep their relative Apple keyboard positions, but are moved to "mod-tap" keys on `Layer 1`, and on the same position but as "sticky keys" on `Layer 2`. This allows for easy 2 handed or 1 handed shortcuts.
-- Arrow keys are moved to `Layer 2` on traditional VIM positions.
-- **⇥** and `` `~ `` are moved to inner thumbs on each hand, where their proximity to the `Command` key makes typical App/Window switching a more comfortable, symmetrical "pinch" 🤏 motion.
-- `Fn` key is duplicated on the right/bottom corner, and it activates the `Fn` layer, which has all `F` keys organized in the same position as their corresponding numbers on `Layer 2` (plus 2 extra ones which go where you imagine they would).
-- Bluetooth profile selectors can also be found on the `Fn` layer, as combos aligned with their corresponding numeric positions.
-- Media keys retain almost their relative position, except they're re-arranged a bit so:
-  - `volume up / down` align with `+ / -` and `Up / Down` arrows, and `U` ("up") and `L` ("low") keys.
-  - `back / forward` align with `Left / Right` arrows.
+```diff
+# ./knucklehead/base.dtsi
 
-A 4th `Meh` modifier is added to the cluster which corresponds to pressing `Control`, `Option` and `Shift` but with a single key, instead of 3. This makes complex shortcuts significantly more comfortable (works great for window managers, app launchers, etc.).
+-#include "L1_colemak-dh.dtsi"
++// #include "L1_colemak-dh.dtsi"
 
----
+-// #include "L1_qwerty.dtsi"
++#include "L1_qwerty.dtsi"
+```
 
-## F.A.Q.s
-
-#### Why "Knucklehead"?
-
-While searching for mnemonic-related names I saw the primary image on the [Wikipedia article for "mnemonic"](https://en.wikipedia.org/wiki/Mnemonic) (a representation of the [Knuckle mnemonic](https://en.wikipedia.org/wiki/Knuckle_mnemonic)), and it occurred to me it'd be a relevant and **_funny_** name (like a slightly more rude version of "a layout for dummies").
-The fact that the combos kind of resemble knuckles is just another happy coincidence. Ehrm… I mean, _totally planned_.
-
-#### Why no "home row mods"?
-
-- I wanted to keep them in the same position across layers without dictating the position of nor interfering with other typically held keys (e.g. arrows).
-- I wanted to diminish their interference with normal/fast typing without over-complicating their implementation, timing configuration, etc. Putting them on "less used" keys helps.
-- Decades of muscle memory for I don't know how many shortcuts across who knows how many apps had me unconsciously reaching for those positions anyway.
-- I feel like the deliberate, paused, "non-rolly" way I tend to use mods makes home position unnecessary.
-- While they don't eliminate hand movement like HMRs, on this new position they still greatly minimize movement/effort, improve comfort when compared to their traditional Apple keyboard position, with the added benefit of leveraging some of your muscle memory.
+> [!NOTE]\
+> Feel free to submit [PRs](/pulls) with additional layouts, or [open an issue](/issues) if you need help with a specific layout. Of course, you're also always welcome to fork this repo and create your own custom layouts.
 
 ---
 
@@ -222,36 +201,11 @@ The fact that the combos kind of resemble knuckles is just another happy coincid
 - [ZMK Discord Server](https://zmk.dev/community/discord/invite)
 - [@caksoylar's Keymap Drawer](/caksoylar/keymap-drawer), [ZMK config](/caksoylar/zmk-config) and [Display improvements for Corne-ish Zen](https://gist.github.com/caksoylar/c411313990978e1903c244f03039187a)
 - [@urob's ZMK config](/urob/zmk-config)
-- ["Callum-style Mods"](/qmk/qmk_firmware/blob/master/users/callum/readme.md)
 - [Colemak-DH](https://colemakmods.github.io/mod-dh/) and the [Effort Grid](https://colemakmods.github.io/mod-dh/model.html)
 - [Darryl's amazing Corne-ish Zen](https://lowprokb.ca/collections/keyboards/products/corne-ish-zen)
 
 ---
 
-> [!IMPORTANT]\
-> Content below was inherited from the default Corne-ish Zen ZMK configuration repository, which is where this repo was forked from. It still needs to be updated, but leaving it here for now because it's still relevant.
-
-## Customization Instructions
-
-1. Edit the keymap file(s):
-   - Change [the keymap file](/config/corneish_zen.keymap) to edit keycodes, add new layers etc.
-   - Change [the conf file](/config/corneish_zen.conf) to edit configuration settings like changing the deep sleep timeout
-2. Commit and push. GitHub Actions will start building a new version of the firmware with the updated keymap and drawing.
-
-## Firmware Files
-
-To locate your firmware files...
-
-1. Click "Actions" in the main navigation, and in the left navigation click the "Build" link.
-2. Select the desired workflow run in the centre area of the page (based on date and time of the build you wish to use). You can also start a new build from this page by clicking the "Run workflow" button.
-3. After clicking the desired workflow run, you should be presented with a section at the bottom of the page called "Artifacts". This section contains the results of your build, in a file called "firmware.zip"
-4. Download the firmware zip archive and extract the two `.uf2` files. They are named according to which side they need to be flashed to.
-5. Flash the firmware to your keyboard by double-clicking the reset button to put the it in bootloader mode. A window should pop up showing the contents of the storage on the keyboard. Drag and drop the correct `.uf2` file into the window. When the upload is complete the window will close and the keyboard will exit bootloader mode.
-   - If you only changed [the keymap file](/config/corneish_zen.keymap) you only need to flash the left side firmware to the left side.
-   - If you changed [the conf file](/config/corneish_zen.conf) you should flash both sides their respective files.
-
-Your keyboard is now ready to use.
-
-[^1]: Currently 42 keys because that's what I use, but honestly sometimes I feels like I have a few keys I don't know what to do with; though I often go back to re-adding them when I try removing them, so :shrug:. May make it work for other boards in the future, but may not be a priority for a while. No promises.
+[^1]: Name inspired by Inspired by the [Knuckle mnemonic](https://en.wikipedia.org/wiki/Knuckle_mnemonic)).
 
 [^2]: Well, "designed" is perhaps too strong a word. I've haphazardly and painfully iterated over dozens of permutations, gradually removing annoyances / disruptions to my flow.
