@@ -5,3 +5,4 @@ modules/
 tools/
 .west/
 .DS_Store
+.venv/

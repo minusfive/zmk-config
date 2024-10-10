@@ -281,6 +281,7 @@ draw_config:
     .hold {
         dominant-baseline: ideographic;
         fill: var(--color--key--text--hold);
+        translate: -25px 4px;
     }
 
     /*
@@ -311,7 +312,7 @@ draw_config:
     }
     .combo.hold {
         font-size: 16px;
-        /* translate: 2px 0px; */
+        translate: 0 0;
     }
 
     /*
@@ -462,6 +463,10 @@ parse_config:
       tap: $$mdi:backup-restore$$
     "&bootloader":
       tap: $$mdi:progress-download$$
+    "&rst_boot 0 0":
+      type: bootloader
+      tap: $$mdi:backup-restore$$
+      hold: $$mdi:progress-download$$
 
   # ZMK
   zmk_keycode_map:
@@ -608,14 +613,15 @@ parse_config:
     RSHIFT: $$mdi:apple-keyboard-shift$$
     RSHFT: $$mdi:apple-keyboard-shift$$
     RCMD: $$mdi:apple-keyboard-command$$
-    # "Meh" key
-    LS(LC(LALT)): $$mdi:star-three-points$$
+    LS(LC(LALT)): $$mdi:triangle$$ # Meh
 
     # Arrows
     UP: $$mdi:arrow-up-bold$$
     DOWN: $$mdi:arrow-down-bold$$
     LEFT: $$mdi:arrow-left-bold$$
     RIGHT: $$mdi:arrow-right-bold$$
+    PG_UP: $$mdi:transfer-up$$
+    PG_DN: $$mdi:transfer-down$$
 
     # Whitespace
     ENTER:
