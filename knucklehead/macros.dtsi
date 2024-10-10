@@ -12,7 +12,6 @@
         `&lm L1 LSHIFT`
      */
     /omit-if-no-ref/ lm: lm {
-      label = "Layer Mod";
       wait-ms = <0>;
       tap-ms = <0>;
       compatible = "zmk,behavior-macro-two-param";
@@ -39,7 +38,6 @@
         `&csl L1`
      */
     /omit-if-no-ref/ csl: clear_sl {
-      label = "Clear + Sticky Layer";
       wait-ms = <0>;
       tap-ms = <0>;
       compatible = "zmk,behavior-macro-one-param";
@@ -65,7 +63,6 @@
         `&cmo L1`
      */
     /omit-if-no-ref/ cmo: clear_mo {
-      label = "Clear + Momentary Layer";
       wait-ms = <0>;
       tap-ms = <0>;
       compatible = "zmk,behavior-macro-one-param";
