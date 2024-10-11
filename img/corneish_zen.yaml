@@ -35,7 +35,7 @@ layers:
   - H
   - {t: ',', s: <}
   - {t: ., s: '>'}
-  - {t: /, s: '?'}
+  - {t: ;, s: ':'}
   - {t: Fn, h: '$$mdi:close-box$$'}
   - $$mdi:keyboard-tab$$
   - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-shift$$'}
@@ -167,7 +167,7 @@ combos:
   k: {h: '=', s: +}
   l: [L1, L2, Fn]
 - p: [9, 21]
-  k: {h: ;, s: ':'}
+  k: {t: /, s: '?'}
   l: [L1, L2, Fn]
 - p: [6, 18]
   k: $$mdi:transfer-up$$
