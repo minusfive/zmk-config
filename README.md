@@ -209,6 +209,6 @@ In order to use layouts other than the default [Colemak-DH](https://colemakmods.
 
 ---
 
-[^1]: Name inspired by Inspired by the [Knuckle mnemonic](https://en.wikipedia.org/wiki/Knuckle_mnemonic)).
+[^1]: Name inspired by the [Knuckle mnemonic](https://en.wikipedia.org/wiki/Knuckle_mnemonic).
 
-[^2]: Well, "designed" is perhaps too strong a word. I've haphazardly and painfully iterated over dozens of permutations, gradually removing annoyances / disruptions to my flow.
+[^2]: "Designed" is perhaps too strong a word. "Haphazardly and painfully iterated over dozens of permutations, gradually removing annoyances and disruptions to my flow" is too long, though.
