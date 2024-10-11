@@ -84,7 +84,7 @@ When a key is replaced on upper layers, an associative mnemonic is used to make 
 
 On upper layers unused keys are "[transparent](https://zmk.dev/docs/behaviors/misc#transparent)", so events flow down to (and are activated on) the base layer, and thus the base layer's key placement is preserved.
 
-Together with the [single base layer](#single-base-layer) and [upper layer swapping](#upper-layer-swapping), these principles of static, associative key placement aim to make the [modal nature of layers](<https://en.wikipedia.org/wiki/Modality_(human–computer_interaction)>) more intuitive and predictable, enabling faster development of muscle memory.
+Together with the [single base layer](#single-base-layer) and [upper layer swapping](#upper-layer-swapping-vs-stacking), these principles of static, associative key placement aim to make the [modal nature of layers](<https://en.wikipedia.org/wiki/Modality_(human–computer_interaction)>) more intuitive and predictable, enabling faster development of muscle memory.
 
 ---
 
