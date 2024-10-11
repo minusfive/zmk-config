@@ -26,7 +26,7 @@ jobs:
       install_branch: "main" # branch to install keymap-drawer from
       keymap_patterns: "config/corneish_zen.keymap" # path to the keymaps to parse
       config_path: "keymap-drawer/config.yaml" # config file, ignored if it doesn't exist
-      output_folder: "keymap-drawer" # path to save produced SVGs
+      output_folder: "img" # path to save produced SVGs
       # commit_message: "Draw: ${{ github.event.head_commit.message }}"
       amend_commit: true # whether to amend the commit or create a new one
       fail_on_error: true

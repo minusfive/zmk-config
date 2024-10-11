@@ -10,7 +10,7 @@ Knucklehead[^1] is a mnemonic, macOS-optimized, 42 key ergonomic columnar layout
 
 ## [![Build ZMK firmware](https://github.com/minusfive/zmk-config/actions/workflows/build.yml/badge.svg)](https://github.com/minusfive/zmk-config/actions/workflows/build.yml)
 
-<img src="./keymap-drawer/corneish_zen.svg" alt="minusfive's keymap layout graphical representation" width="100%" />
+<img src="./img/corneish_zen.svg" alt="minusfive's keymap layout graphical representation" width="100%" />
 
 ![minusfive's Corne-ish Zen](img/corneish_zen.png)
 
