@@ -195,8 +195,6 @@ In order to use layouts other than the default [Colemak-DH](https://colemakmods.
 +#include "L1_qwerty.dtsi"
 ```
 
-<https://github.com/minusfive/zmk-config/blob/2b20595017111d5ab5fe2b6731a971d3410b28c5/knucklehead/base.dtsi#L34-L38>
-
 ---
 
 ## Resources
