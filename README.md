@@ -39,11 +39,6 @@ Knucklehead[^1] is a mnemonic, macOS-optimized, 42 key ergonomic columnar layout
 > [!NOTE]\
 > These are **optimized for the [Colemak-DH](https://colemakmods.github.io/mod-dh/)** layout. While many will work well regardless of layout, others will be "lost in translation".
 >
-> [Other layouts available](#using-layouts-other-than-colemak-dh):
->
-> - [QWERTY](./knucklehead/L1_qwerty.dtsi)
-> - [Colemak](./knucklehead/L1_colemak.dtsi)
->
 > See: [Using layouts other than Colemak-DH](#using-layouts-other-than-colemak-dh)
 
 <!-- &nbsp;s force column width and prevent unwanted breaks -->
@@ -178,6 +173,15 @@ These special cases are marked with the same 🆇 symbol.
 
 ## Using layouts other than Colemak-DH
 
+> [!NOTE]\
+> Other layouts available:
+>
+> - [Colemak](./knucklehead/L1_colemak.dtsi) (classic)
+> - [Dvorak](./knucklehead/L1_dvorak.dtsi)
+> - [QWERTY](./knucklehead/L1_qwerty.dtsi)
+>
+> Feel free to submit [PRs](/pulls) with additional layouts, or [open an issue](/issues) if you need help with a specific layout. Of course, you're also always welcome to fork this repo and create your own custom layouts.
+
 In order to use layouts other than the default [Colemak-DH](https://colemakmods.github.io/mod-dh/) layout, you'll need to comment-out the `#include "L1_colemak-dh.dtsi"` statement in [./knucklehead/base.dtsi](./knucklehead/base.dtsi), and uncomment the corresponding layout file you wish to use. E.g.:
 
 ```diff
@@ -185,13 +189,13 @@ In order to use layouts other than the default [Colemak-DH](https://colemakmods.
 
 -#include "L1_colemak-dh.dtsi"
 +// #include "L1_colemak-dh.dtsi"
-
+// #include "L1_colemak.dtsi"
+// #include "L1_dvorak.dtsi"
 -// #include "L1_qwerty.dtsi"
 +#include "L1_qwerty.dtsi"
 ```
 
-> [!NOTE]\
-> Feel free to submit [PRs](/pulls) with additional layouts, or [open an issue](/issues) if you need help with a specific layout. Of course, you're also always welcome to fork this repo and create your own custom layouts.
+<https://github.com/minusfive/zmk-config/blob/2b20595017111d5ab5fe2b6731a971d3410b28c5/knucklehead/base.dtsi#L34-L38>
 
 ---
 
