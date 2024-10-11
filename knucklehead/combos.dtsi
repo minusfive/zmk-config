@@ -21,9 +21,6 @@
                   ╰────────────╯  ╰────────────╯
     */
 
-    /* Layers */
-    // COMBO(to_2, &to L2, 38 39, L1, COMBO_TERM_DEFAULT, COMBO_QUICK_TAP_MS)
-
     /* Symbols */
     // Left
     COMBO(excl, &kp EXCL, 1 13, L1 L2, COMBO_TERM_DEFAULT, COMBO_QUICK_TAP_MS)
@@ -39,7 +36,7 @@
     // Right
     COMBO(minus, &kp MINUS, 7 19, L1 L2 Fn, COMBO_TERM_DEFAULT, COMBO_QUICK_TAP_MS)
     COMBO(equal, &kp EQUAL, 8 20, L1 L2 Fn, COMBO_TERM_DEFAULT, COMBO_QUICK_TAP_MS)
-    COMBO(semicolon, &kp SEMICOLON, 9 21, L1 L2 Fn, COMBO_TERM_DEFAULT, COMBO_QUICK_TAP_MS)
+    COMBO(slash, &kp SLASH, 9 21, L1 L2 Fn, COMBO_TERM_DEFAULT, COMBO_QUICK_TAP_MS)
     COMBO(pgup, &kp PG_UP, 6 18, L1 L2 Fn, COMBO_TERM_DEFAULT, COMBO_QUICK_TAP_MS)
     COMBO(pgdn, &kp PG_DN, 18 30, L1 L2 Fn, COMBO_TERM_DEFAULT, COMBO_QUICK_TAP_MS)
     COMBO(lbkt, &kp LBKT, 19 31, L1 L2 Fn, COMBO_TERM_DEFAULT, COMBO_QUICK_TAP_MS)
