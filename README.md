@@ -147,27 +147,28 @@ On `L2` the same thumb keys you use to summon it will act as follows:
 
 ### Non-Stacking Upper Layers
 
-One of [ZMK's great features is its stacking layers system](https://zmk.dev/docs/features/keymaps#layers).
-These can be amazing for things like multiple "active" base layers for different alphas layouts and such, while sharing a common set of "momentary" layers.
-However, unless you really understand this behavior and explicitly wish to use it, it may become really confusing very quickly, and make you feel lost in a layer maze.
-
-Since the aim of this keymap is to meet newcomers half-way (specifically those transitioning from Apple keyboards), and make it as intuitive as possible, this behavior is specifically avoided in a few ways:
-
 > [!NOTE]\
 > If this all sounds like gibberish to you here's all you need to understand: `L1` should always be the layer behind `L2` or `Fn`. If that's not the case, please [report it as a bug](/minusfive/zmk-config/issues).
+
+One of [ZMK's great features is its stacking layers model](https://zmk.dev/docs/features/keymaps#layers).
+It works great for features like multiple "active" base layers, while sharing a common set of "momentary" upper layers (e.g. to switch alpha base layout at runtime, like from Colemak to QWERTY, while maintaining common upper layers for num, nav, fn, etc.).
+
+However, unless you really understand this behavior and adapt your mental model to it, it may feel confusing and unintuitive at first, and get you lost in a layer maze.
+
+Since the primary aims of this keymap are ease of use and intuitiveness, this behavior is purposefully avoided in a few ways:
 
 #### Single Base Layer
 
 `L1` is the one true base layer. There is no way to permanently activate any other layer, only momentary (`&mo`), sticky (`&sl`), and [smart layer](#smart-l2-layer) behaviors are used.
 
-#### Upper Layer Swapping
+#### Upper Layer Swapping (vs. Stacking)
 
-Additionally, in order to prevent even momentary layer stacking, a "cancel" (🆇) event is triggered in some circumstances prior to switching to a layer, so that you're first bumped back down to `L1` before switching to the desired layer.
+To prevent even momentary layer stacking, a "cancel" (🆇) event is triggered in some circumstances prior to switching to a layer, so that you're first bumped back down to `L1` before switching to the desired layer.
 This all happens transparently without delay, so from your perspective you just "swapped" upper layers, instead of stacking them.
 This ensures any transparent keys in that upper layer will fall through to `L1`, and sticky timeouts will bump you back to `L1` immediately, as you would expect.
 These special cases are marked with the same 🆇 symbol.
 
-**Without this behavior**, for example, it might've been confusing if you pressed the `Fn` key while on `L2`'s smart layer mode, and pressed a transparent key expecting an `L1` keycode when instead you get an `L2`.
+Without this behavior it might've been confusing if you pressed the `Fn` key while on `L2`'s smart layer mode, and pressed a transparent key expecting an `L1` keycode when instead you get an `L2` one.
 
 ---
 
