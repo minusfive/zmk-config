@@ -159,7 +159,9 @@ Since the primary aims of this keymap are ease of use and intuitiveness, this be
 
 #### Single Base Layer
 
-`L1` is the one true base layer. There is no way to permanently activate any other layer, only momentary (`&mo`), sticky (`&sl`), and [smart layer](#smart-l2-layer) behaviors are used.
+`L1` is the one true base layer. There is no way to permanently activate any other layer - only momentary (`&mo`), sticky (`&sl`), and [smart layer](#smart-l2-layer) behaviors are used.
+
+To use a different base layer/layout, you'll need to switch it at compile time. See: [Using layouts other than Colemak-DH](#using-layouts-other-than-colemak-dh).
 
 #### Upper Layer Swapping (vs. Stacking)
 
