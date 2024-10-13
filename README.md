@@ -24,7 +24,7 @@ Knucklehead[^1] is a mnemonic, macOS-optimized, 42 key ergonomic columnar layout
 |   ⌃    | Control                                      |   ⇥    | Tab                                                       |
 |   ⌥    | Option                                       |   ␣    | Space                                                     |
 |   ⌘    | Command                                      |   ⇡    | Page Up                                                   |
-|   ▲    | Meh (⌃ + ⌥ + ⇧)                              |   ⇣    | Page Down                                                 |
+|   ▲    | Meh (⌃&nbsp;+&nbsp;⌥&nbsp;+&nbsp;⇧)                              |   ⇣    | Page Down                                                 |
 |   ⇧    | Shift                                        |   ⛭    | Brightness Up                                             |
 |   ⇪    | Caps Lock                                    |   ⛯    | Brightness Down                                           |
 |   ⌫    | Backspace                                    |   ⟲    | Firmware reset (hold: bootloader mode)                    |
