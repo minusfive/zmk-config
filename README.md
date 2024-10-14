@@ -3,10 +3,9 @@
 Knucklehead[^1] is a mnemonic, macOS-optimized, 42 key ergonomic columnar layout for [corne-style split keyboards](https://github.com/foostan/crkbd), designed[^2] to ease the transition from standard ANSI Apple-style keyboards.
 
 > [!WARNING]\
-> Under **_active development_**. Expect breaking changes and scarce/incomplete documentation.
-
-> [!IMPORTANT]\
-> [Home Row Mods](#timer-less-home-row-mods) are now enabled by default. To use the previous version, switch to the [legacy branch](https://github.com/minusfive/zmk-config/tree/legacy).
+>
+> - [Home Row Mods](#timer-less-home-row-mods) are now the default. Previous version available on the [legacy branch](https://github.com/minusfive/zmk-config/tree/legacy).
+> - Under **_active development_**. Expect breaking changes and scarce/incomplete documentation.
 
 ## [![Build ZMK firmware](https://github.com/minusfive/zmk-config/actions/workflows/build.yml/badge.svg)](https://github.com/minusfive/zmk-config/actions/workflows/build.yml)
 
@@ -24,7 +23,7 @@ Knucklehead[^1] is a mnemonic, macOS-optimized, 42 key ergonomic columnar layout
 |   ⌃    | Control                                      |   ⇥    | Tab                                                       |
 |   ⌥    | Option                                       |   ␣    | Space                                                     |
 |   ⌘    | Command                                      |   ⇡    | Page Up                                                   |
-|   ▲    | Meh (⌃&nbsp;+&nbsp;⌥&nbsp;+&nbsp;⇧)                              |   ⇣    | Page Down                                                 |
+|   ▲    | Meh (⌃&nbsp;+&nbsp;⌥&nbsp;+&nbsp;⇧)          |   ⇣    | Page Down                                                 |
 |   ⇧    | Shift                                        |   ⛭    | Brightness Up                                             |
 |   ⇪    | Caps Lock                                    |   ⛯    | Brightness Down                                           |
 |   ⌫    | Backspace                                    |   ⟲    | Firmware reset (hold: bootloader mode)                    |
