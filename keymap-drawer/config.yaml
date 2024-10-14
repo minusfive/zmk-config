@@ -11,8 +11,8 @@ draw_config:
   line_spacing: 1
 
   # combo box dimensions
-  combo_w: 36
-  combo_h: 36
+  combo_w: 34
+  combo_h: 34
 
   # padding from the edge of cap to top and bottom legends
   small_pad: 4
@@ -37,8 +37,8 @@ draw_config:
 
   # Glyphs dimensions
   glyph_tap_size: 26
-  glyph_hold_size: 18
-  glyph_shifted_size: 18
+  glyph_hold_size: 16
+  glyph_shifted_size: 16
 
   # Custom CSS
   svg_style: |
@@ -252,10 +252,14 @@ draw_config:
     /* Layer labels */
     text.label {
         font-weight: bold;
+        font-size: 36px;
         text-anchor: start;
         paint-order: stroke;
         fill: var(--color--layer--text);
-        dominant-baseline: text-before-edge;
+        translate: 581px 146px;
+    }
+    .layer-Fn text.label {
+        translate: 581px 164px;
     }
 
 
@@ -270,19 +274,38 @@ draw_config:
     }
     .shifted,
     .hold {
-        font-size: 18px;
+        font-size: 16px;
         text-anchor: middle;
     }
+
     .shifted {
         dominant-baseline: hanging;
         fill: var(--color--key--text--shifted);
-        translate: -25px 2px;
+        translate: -26px 2px;
     }
+    .shifted.glyph {
+        translate: -26px 0px;
+    }
+    .shifted.mdi\:alpha-w-box {
+      translate: 26px 0px;
+    }
+
     .hold {
         dominant-baseline: ideographic;
         fill: var(--color--key--text--hold);
-        translate: -25px 4px;
+        translate: -26px 4px;
     }
+    .hold.glyph {
+        translate: -26px 2px;
+    }
+
+    .shifted.mdi\:usb {
+      translate: -26px 26px;
+    }
+    .hold.mdi\:bluetooth {
+      translate: 26px -26px;
+    }
+
 
     /*
      * Combos
@@ -300,7 +323,6 @@ draw_config:
     path.combo {
         stroke-width: 1;
         stroke: var(--color--combo--dendron);
-        stroke-dasharray: 2, 2;
         fill: none;
     }
     .combo.tap {
@@ -309,6 +331,9 @@ draw_config:
     .combo.shifted {
         font-size: 13px;
         translate: -9px -2px;
+    }
+    .combo.shifted.glyph {
+        translate: -9px -3px;
     }
     .combo.hold {
         font-size: 16px;
@@ -349,16 +374,6 @@ draw_config:
     /*
      * Overrides
      */
-    .shifted.mdi\:alpha-w-box {
-      translate: 25px 0px;
-    }
-    .shifted.mdi\:usb {
-      translate: -25px 25px;
-    }
-    .hold.mdi\:bluetooth {
-      translate: 25px -25px;
-    }
-
     /* Outer column + thumb keys */
     .keypos-0,
     .keypos-11,
