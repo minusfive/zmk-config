@@ -105,7 +105,7 @@ The most common example of this type of behavior is [ZMK's `&caps_word`](https:/
 This layout uses 2 smart word behaviors (marked with the 🆆 symbol):
 
 > [!NOTE]\
-> Both of these were taken from [@urob's fantastic layout](/urob/zmk-config).
+> Both of these were taken from [@urob's fantastic layout](https://github.com/urob/zmk-config).
 
 #### Smart Shift
 
@@ -147,7 +147,7 @@ On `L2` the same thumb keys you use to summon it will act as follows:
 ### Non-Stacking Upper Layers
 
 > [!NOTE]\
-> If this all sounds like gibberish to you here's all you need to understand: `L1` should always be the layer behind `L2` or `Fn`. If that's not the case, please [report it as a bug](/minusfive/zmk-config/issues).
+> If this all sounds like gibberish to you here's all you need to understand: `L1` should always be the layer behind `L2` or `Fn`. If that's not the case, please [report it as a bug](https://github.com/minusfive/zmk-config/issues).
 
 One of [ZMK's great features is its stacking layers model](https://zmk.dev/docs/features/keymaps#layers).
 It works great for features like multiple "active" base layers, while sharing a common set of "momentary" upper layers (e.g. to switch alpha base layout at runtime, like from Colemak to QWERTY, while maintaining common upper layers for num, nav, fn, etc.).
@@ -182,7 +182,7 @@ Without this behavior it might've been confusing if you pressed the `Fn` key whi
 > - [Dvorak](./knucklehead/L1_dvorak.dtsi)
 > - [QWERTY](./knucklehead/L1_qwerty.dtsi)
 >
-> Feel free to submit [PRs](/pulls) with additional layouts, or [open an issue](/issues) if you need help with a specific layout. Of course, you're also always welcome to fork this repo and create your own custom layouts.
+> Feel free to submit [PRs](https://github.com/minusfive/zmk-config/pulls) with additional layouts, or [open an issue](https://github.com/minusfive/zmk-config/issues) if you need help with a specific layout. Of course, you're also always welcome to fork this repo and create your own custom layouts.
 
 In order to use layouts other than the default [Colemak-DH](https://colemakmods.github.io/mod-dh/) layout, you'll need to comment-out the `#include "L1_colemak-dh.dtsi"` statement in [./knucklehead/base.dtsi](./knucklehead/base.dtsi), and uncomment the corresponding layout file you wish to use. E.g.:
 
@@ -201,11 +201,11 @@ In order to use layouts other than the default [Colemak-DH](https://colemakmods.
 
 ## Resources
 
-- [ZMK Firmware GitHub](/zmkfirmware/zmk)
+- [ZMK Firmware GitHub](https://github.com/zmkfirmware/zmk)
 - [ZMK Documentation](https://zmk.dev/docs)
 - [ZMK Discord Server](https://zmk.dev/community/discord/invite)
-- [@caksoylar's Keymap Drawer](/caksoylar/keymap-drawer), [ZMK config](/caksoylar/zmk-config) and [Display improvements for Corne-ish Zen](https://gist.github.com/caksoylar/c411313990978e1903c244f03039187a)
-- [@urob's ZMK config](/urob/zmk-config)
+- [@caksoylar's Keymap Drawer](https://github.com/caksoylar/keymap-drawer), [ZMK config](https://github.com/caksoylar/zmk-config) and [Display improvements for Corne-ish Zen](https://gist.github.com/caksoylar/c411313990978e1903c244f03039187a)
+- [@urob's ZMK config](https://github.com/urob/zmk-config)
 - [Colemak-DH](https://colemakmods.github.io/mod-dh/) and the [Effort Grid](https://colemakmods.github.io/mod-dh/model.html)
 - [Darryl's amazing Corne-ish Zen](https://lowprokb.ca/collections/keyboards/products/corne-ish-zen)
 
