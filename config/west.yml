@@ -18,8 +18,8 @@ manifest:
       revision: main
 
     - name: zmk-tri-state
-      remote: caksoylar
-      revision: split-locality
+      remote: urob
+      revision: main
 
   self:
     path: config
