@@ -1,7 +1,5 @@
 name: Deploy to Pages
-
-# Can only be triggered manually
-on: workflow_dispatch
+on: workflow_dispatch # Can only be triggered manually
 
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
