@@ -1,19 +1,20 @@
 # 👊 Knucklehead
 
-[![Build ZMK firmware](https://github.com/minusfive/zmk-config/actions/workflows/build.yml/badge.svg)](https://github.com/minusfive/zmk-config/actions/workflows/build.yml) [![Draw keymap](https://github.com/minusfive/zmk-config/actions/workflows/draw.yml/badge.svg)](https://github.com/minusfive/zmk-config/actions/workflows/draw.yml)
-
 Knucklehead[^1] is a mnemonic, macOS-optimized, 42 key ergonomic columnar layout for [corne-style split keyboards](https://github.com/foostan/crkbd), designed[^2] to ease the transition from standard ANSI Apple-style keyboards.
 
-> [!WARNING]\
-> [Home Row Mods](#timer-less-home-row-mods) are now the default. Previous version available on the [legacy branch](https://github.com/minusfive/zmk-config/tree/legacy).
+> [!WARNING]
 >
 > Under **_active development_**. Expect breaking changes and scarce/incomplete documentation.
 
-<img src="./img/corneish_zen.svg" alt="minusfive's keymap layout graphical representation" width="100%" />
+[![Build ZMK firmware](https://github.com/minusfive/zmk-config/actions/workflows/build.yml/badge.svg)](https://github.com/minusfive/zmk-config/actions/workflows/build.yml) [![Draw keymap](https://github.com/minusfive/zmk-config/actions/workflows/draw.yml/badge.svg)](https://github.com/minusfive/zmk-config/actions/workflows/draw.yml)
 
-![minusfive's Corne-ish Zen](img/corneish_zen.png)
+<img src="./img/corneish_zen.svg" alt="Knucklehead keymap layout graphical representation" width="100%" />
 
 > Drawn with [@caksoylar's Keymap Drawer](https://github.com/caksoylar/keymap-drawer)
+
+> [!IMPORTANT]
+>
+> [Home Row Mods](#timer-less-home-row-mods) are now the default. Previous version available on the [legacy branch](https://github.com/minusfive/zmk-config/tree/legacy).
 
 ## Legend
 
@@ -35,8 +36,15 @@ Knucklehead[^1] is a mnemonic, macOS-optimized, 42 key ergonomic columnar layout
 
 ### Mnemonic Affordances
 
-> [!NOTE]\
-> These are **optimized for the [Colemak-DH](https://colemakmods.github.io/mod-dh/)** layout. While many will work well regardless of layout, others will be "lost in translation".
+> [!NOTE]
+>
+> These are **optimized for the [Colemak-DH](https://colemakmods.github.io/mod-dh/)** layout (default). However, most should still work well regardless of layout, while others will be "lost in translation".
+>
+> Other layouts available:
+>
+> - [Colemak](./knucklehead/L1_colemak.dtsi) (classic)
+> - [Dvorak](./knucklehead/L1_dvorak.dtsi)
+> - [QWERTY](./knucklehead/L1_qwerty.dtsi)
 >
 > See: [Using layouts other than Colemak-DH](#using-layouts-other-than-colemak-dh)
 
@@ -91,7 +99,8 @@ Together with the [single base layer](#single-base-layer) and [upper layer swapp
 
 By using [@urob's Timer-less](https://github.com/urob/zmk-config?tab=readme-ov-file#timeless-homerow-mods) [Home Row Mods](https://precondition.github.io/home-row-mods), modifier keys (`⌃`, `⌥`, `⌘`, `▲`) can be activated by holding keys in the "home row", consistently across layers, without interfering with normal typing (i.e. without the need to tap a key within a certain time window).
 
-> [!NOTE]\
+> [!NOTE]
+>
 > To hold-repeat a key in the home row (or any other dual-purpose key), simply tap it twice and hold.
 
 ---
@@ -104,7 +113,8 @@ The most common example of this type of behavior is [ZMK's `&caps_word`](https:/
 
 This layout uses 2 smart word behaviors (marked with the 🆆 symbol):
 
-> [!NOTE]\
+> [!NOTE]
+>
 > Both of these were taken from [@urob's fantastic layout](https://github.com/urob/zmk-config).
 
 #### Smart Shift
@@ -146,7 +156,8 @@ On `L2` the same thumb keys you use to summon it will act as follows:
 
 ### Non-Stacking Upper Layers
 
-> [!NOTE]\
+> [!NOTE]
+>
 > If this all sounds like gibberish to you here's all you need to understand: `L1` should always be the layer behind `L2` or `Fn`. If that's not the case, please [report it as a bug](https://github.com/minusfive/zmk-config/issues).
 
 One of [ZMK's great features is its stacking layers model](https://zmk.dev/docs/features/keymaps#layers).
@@ -175,15 +186,6 @@ Without this behavior it might've been confusing if you pressed the `Fn` key whi
 
 ## Using layouts other than Colemak-DH
 
-> [!NOTE]\
-> Other layouts available:
->
-> - [Colemak](./knucklehead/L1_colemak.dtsi) (classic)
-> - [Dvorak](./knucklehead/L1_dvorak.dtsi)
-> - [QWERTY](./knucklehead/L1_qwerty.dtsi)
->
-> Feel free to submit [PRs](https://github.com/minusfive/zmk-config/pulls) with additional layouts, or [open an issue](https://github.com/minusfive/zmk-config/issues) if you need help with a specific layout. Of course, you're also always welcome to fork this repo and create your own custom layouts.
-
 In order to use layouts other than the default [Colemak-DH](https://colemakmods.github.io/mod-dh/) layout, you'll need to comment-out the `#include "L1_colemak-dh.dtsi"` statement in [./knucklehead/base.dtsi](./knucklehead/base.dtsi), and uncomment the corresponding layout file you wish to use. E.g.:
 
 ```diff
@@ -197,6 +199,18 @@ In order to use layouts other than the default [Colemak-DH](https://colemakmods.
 +#include "L1_qwerty.dtsi"
 ```
 
+Feel free to submit [PRs](https://github.com/minusfive/zmk-config/pulls) with additional layouts.
+
+---
+
+## Drawing the Keymap
+
+This project uses [@caksoylar's Keymap Drawer](https://github.com/caksoylar/keymap-drawer) to generate the [keymap SVG](./img/corneish_zen.svg) displayed at the top of this document. It can be re-generated by running the [Draw keymap](./.github/workflows/draw.yml), or locally through the Zsh script:
+
+```zsh
+./scripts/draw.zsh
+```
+
 ---
 
 ## Resources
@@ -207,9 +221,7 @@ In order to use layouts other than the default [Colemak-DH](https://colemakmods.
 - [@caksoylar's Keymap Drawer](https://github.com/caksoylar/keymap-drawer), [ZMK config](https://github.com/caksoylar/zmk-config) and [Display improvements for Corne-ish Zen](https://gist.github.com/caksoylar/c411313990978e1903c244f03039187a)
 - [@urob's ZMK config](https://github.com/urob/zmk-config)
 - [Colemak-DH](https://colemakmods.github.io/mod-dh/) and the [Effort Grid](https://colemakmods.github.io/mod-dh/model.html)
-- [Darryl's amazing Corne-ish Zen](https://lowprokb.ca/collections/keyboards/products/corne-ish-zen)
-
----
+- [Darryl's beautiful Corne-ish Zen](https://lowprokb.ca/collections/keyboards/products/corne-ish-zen)
 
 [^1]: Name inspired by the [Knuckle mnemonic](https://en.wikipedia.org/wiki/Knuckle_mnemonic).
 
