@@ -105,6 +105,19 @@
     };
 
     /*
+    - tap: &tog Ms
+    - tap x 2: &none
+    - tap x 3: &tog Ms
+    */
+    /*/omit-if-no-ref/ smart_mouse: smart_mouse {
+      compatible = "zmk,behavior-tri-state";
+      bindings = <&tog Ms>, <&none>, <&tog Ms>;
+      ignored-key-positions = <6 7 8 9 18 19 20 21 40 41>;
+      ignored-layers = <L2 Ms>;
+      #binding-cells = <0>;
+    };*/
+
+    /*
     - tap: &kp <PARAM_2>
     - hold: &none
 

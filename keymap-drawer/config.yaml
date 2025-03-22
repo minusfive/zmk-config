@@ -35,6 +35,35 @@ parse_config:
       tap: $$mdi:minus-circle-outline$$
       type: none
 
+    # Mouse
+    "&smart_mouse": $$mdi:mouse-scroll-wheel$$
+    "&mmv MOVE_UP":
+      tap: $$mdi:arrow-up-thin$$
+      shifted: $$mdi:mouse-scroll-wheel$$
+    "&mmv MOVE_DOWN":
+      tap: $$mdi:arrow-down-thin$$
+      shifted: $$mdi:mouse-scroll-wheel$$
+    "&mmv MOVE_LEFT":
+      tap: $$mdi:arrow-left-thin$$
+      shifted: $$mdi:mouse-scroll-wheel$$
+    "&mmv MOVE_RIGHT":
+      tap: $$mdi:arrow-right-thin$$
+      shifted: $$mdi:mouse-scroll-wheel$$
+    "&msc SCRL_UP":
+      tap: $$mdi:pan-up$$
+      shifted: $$mdi:mouse-scroll-wheel$$
+    "&msc SCRL_DOWN":
+      tap: $$mdi:pan-down$$
+      shifted: $$mdi:mouse-scroll-wheel$$
+    "&msc SCRL_LEFT":
+      tap: $$mdi:pan-left$$
+      shifted: $$mdi:mouse-scroll-wheel$$
+    "&msc SCRL_RIGHT":
+      tap: $$mdi:pan-right$$
+      shifted: $$mdi:mouse-scroll-wheel$$
+    "&mkp LCLK": $$mdi:mouse-left-click-outline$$
+    "&mkp RCLK": $$mdi:mouse-right-click-outline$$
+
     # Whitespace
     "&bkspc_del":
       type: backspace
