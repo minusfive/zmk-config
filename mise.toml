@@ -1,2 +1,3 @@
 [tools]
-"pipx:keymap-drawer" = "latest"
+# "pipx:keymap-drawer" = "latest"
+"pipx:caksoylar/keymap-drawer" = "dev"

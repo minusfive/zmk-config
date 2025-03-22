@@ -18,19 +18,20 @@ Knucklehead[^1] is a mnemonic, macOS-optimized, 42 key ergonomic columnar layout
 
 ## Legend
 
-| Symbol | Key Name                                     | Symbol | Key Name                                                  |
-| :----: | -------------------------------------------- | :----: | --------------------------------------------------------- |
-|   🆆    | [Smart 🆆ord behavior](#smart-🆆ord-behaviors) |   🆇    | [E🆇it smart 🆆ord behavior](#e🆇iting-smart-🆆ord-behaviors) |
-|   ⌃    | Control                                      |   ⇥    | Tab                                                       |
-|   ⌥    | Option                                       |   ␣    | Space                                                     |
-|   ⌘    | Command                                      |   ⇡    | Page Up                                                   |
-|   ▲    | Meh (⌃&nbsp;+&nbsp;⌥&nbsp;+&nbsp;⇧)          |   ⇣    | Page Down                                                 |
-|   ⇧    | Shift                                        |   ⛭    | Brightness Up                                             |
-|   ⇪    | Caps Lock                                    |   ⛯    | Brightness Down                                           |
-|   ⌫    | Backspace                                    |   ⟲    | Firmware reset (hold: bootloader mode)                    |
-|   ⌦    | Delete                                       |  `L1`  | Layer 1                                                   |
-|   ⏎    | Return                                       |  `L2`  | Layer 2                                                   |
-|   ⏻    | Power                                        |  `Fn`  | Function Layer                                            |
+| Symbol | Key Name                                            | Symbol | Key Name                                                  |
+| :----: | --------------------------------------------------- | :----: | --------------------------------------------------------- |
+|   🆆    | [Smart 🆆ord behavior](#smart-🆆ord-behaviors)        |   🆇    | [E🆇it smart 🆆ord behavior](#e🆇iting-smart-🆆ord-behaviors) |
+|   ⌃    | Control                                             |   ⇥    | Tab                                                       |
+|   ⌥    | Option                                              |   ␣    | Space                                                     |
+|   ⌘    | Command                                             |   ⇡    | Page Up                                                   |
+|   ▲    | Meh (⌃&nbsp;+&nbsp;⌥&nbsp;+&nbsp;⇧)                 |   ⇣    | Page Down                                                 |
+|   ✦    | Hyper (⌃&nbsp;+&nbsp;⌥&nbsp;+&nbsp;⌘&nbsp;+&nbsp;⇧) |   ⛭    | Brightness Up                                             |
+|   ⇧    | Shift                                               |   ⛯    | Brightness Down                                           |
+|   ⇪    | Caps Lock                                           |   ⟲    | Firmware reset (hold: bootloader mode)                    |
+|   ⌫    | Backspace                                           |        |                                                           |
+|   ⌦    | Delete                                              |  `L1`  | Layer 1                                                   |
+|   ⏎    | Return                                              |  `L2`  | Layer 2                                                   |
+|   ⏻    | Power                                               |  `Fn`  | Function Layer                                            |
 
 ## Features
 
