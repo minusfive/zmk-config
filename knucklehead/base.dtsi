@@ -9,6 +9,7 @@
 #define L1 0
 #define L2 1
 #define Fn 2
+#define Kb 3
 
 // Meh key
 #define MEH LS(LC(LALT))
@@ -40,4 +41,5 @@
 // Other layers
 #include "L2.dtsi"
 #include "Fn.dtsi"
+#include "Kb.dtsi"
 

@@ -20,6 +20,9 @@ parse_config:
     "&cmo Fn":
       tap: $$mdi:close-box$$
       hold: Fn
+    "&cmo Kb":
+      tap: $$mdi:close-box$$
+      hold: Kb
     "&cmo L2":
       tap: $$mdi:close-box$$
       hold: L2
@@ -44,24 +47,25 @@ parse_config:
     # Bluetooth
     "&bt BT_SEL 0":
       shifted: $$mdi:bluetooth-connect$$
-      tap: ""
-      hold: 1
+      tap: 1
     "&bt BT_SEL 1":
       shifted: $$mdi:bluetooth-connect$$
-      tap: ""
-      hold: 2
+      tap: 2
     "&bt BT_SEL 2":
       shifted: $$mdi:bluetooth-connect$$
-      tap: ""
-      hold: 3
+      tap: 3
     "&bt BT_SEL 3":
       shifted: $$mdi:bluetooth-connect$$
-      tap: ""
-      hold: 4
+      tap: 4
     "&bt BT_SEL 4":
       shifted: $$mdi:bluetooth-connect$$
-      tap: ""
-      hold: 5
+      tap: 5
+    "&bt BT_PRV":
+      shifted: $$mdi:bluetooth-connect$$
+      tap: $$mdi:chevron-left$$
+    "&bt BT_NXT":
+      shifted: $$mdi:bluetooth-connect$$
+      tap: $$mdi:chevron-right$$
     "&out OUT_TOG":
       shifted: $$mdi:usb$$
       tap: $$mdi:toggle-switch$$
@@ -627,6 +631,23 @@ draw_config:
     }
     .hold.mdi\:bluetooth {
       translate: 26px -26px;
+    }
+    .shifted.mdi\:bluetooth-connect {
+      translate: -10px 34px;
+      scale: 1.4;
+    }
+    .tap:has(+ .shifted.mdi\:bluetooth-connect) {
+      translate: 10px 0px;
+    }
+    .mdi\:chevron-left:has(+ .shifted.mdi\:bluetooth-connect) {
+      translate: -10px 0px;
+    }
+    .mdi\:chevron-left + .shifted.mdi\:bluetooth-connect {
+      translate: 6px 36px;
+    }
+    .mdi\:chevron-right + .shifted.mdi\:bluetooth-connect {
+      translate: -6px 69px;
+      scale: 1.5;
     }
 
 

@@ -1,26 +1,26 @@
 /**
- * Function / System Layer
+ * Keyboard Settings Layer
  */
 
 / {
   keymap {
     compatible = "zmk,keymap";
 
-    fn_layer {
-      display-name = "Fn";
+    kb_layer {
+      display-name = "Kb";
       bindings = <
 // ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮   ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
 // │0              │1              │2              │3              │4              │5              │   │6              │7              │8              │9              │10             │11             │
-    &trans          &kp F1          &kp F2          &kp F3          &kp F4          &kp F5              &trans          &kp C_BRI_DN    &kp C_BRI_UP    &trans          &trans          &kp C_POWER
+    &out OUT_TOG    &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4        &trans          &trans          &trans          &trans          &trans          &trans
 // ├───────────────├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
 // │12             │13             │14             │15             │16             │17             │   │18             │19             │20             │21             │22             │23             │
-    &trans          &kp F6          &hrml LCTRL F7  &hrml LALT F8   &hrml LCMD F9   &hrml MEH F10       &trans          &trans          &trans          &trans          &trans          &trans
+    &rst_boot 0 0   &trans          &trans          &trans          &trans          &trans              &trans          &trans          &trans          &trans          &trans          &rst_boot 0 0
 // ├───────────────├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
 // │24             │25             │26             │27             │28             │29             │   │30             │31             │32             │33             │34             │35             │
-    &cmo Fn         &kp F11         &kp F12         &kp F13         &kp F14         &kp F15             &trans          &trans          &trans          &trans          &trans          &cmo Fn
+    &cmo Fn         &trans          &bt BT_CLR      &trans          &trans          &trans              &trans          &trans          &trans          &trans          &trans          &cmo Fn
 // ╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────├───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
 //                                                 │36             │37             │38             │   │39             │40             │41             │
-                                                    &trans          &trans          &cmo L2             &cmo L2         &kp CAPSLOCK    &trans
+                                                    &cmo Kb         &bt BT_PRV      &bt BT_NXT          &trans          &trans          &cmo Kb
 //                                                 ╰───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────╯
       >;
     };
