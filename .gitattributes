@@ -1,0 +1,6 @@
+*.conf linguist-detectable
+*.conf linguist-language=shell
+*.dtsi linguist-detectable
+*.dtsi linguist-language=c
+*.keymap linguist-detectable
+*.keymap linguist-language=c
