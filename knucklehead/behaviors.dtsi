@@ -17,11 +17,6 @@
   quick-release;
 };
 
-// mods deactivate caps-word, requires PR https://github.com/zmkfirmware/zmk/pull/1451
-// &caps_word {
-//   /delete-property/ ignore-modifiers;
-// };
-
 // From: https://github.com/urob/zmk-config/
 // num-word, requires PR https://github.com/zmkfirmware/zmk/pull/1451
 // Adds arrows and shift to smart layer for more comfortable navigation/selection moves
@@ -50,6 +45,7 @@
       require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS>;
       #binding-cells = <2>;
     };
+
     /omit-if-no-ref/ hrmr: hrm_right {
       bindings = <&kp>, <&kp>;
       compatible = "zmk,behavior-hold-tap";
@@ -105,35 +101,6 @@
     };
 
     /*
-    - tap: &kp <PARAM_2>
-    - hold: &none
-
-    Example: &nh 0 K_CANCEL
-    */
-    /omit-if-no-ref/ nh: no_hold {
-      compatible = "zmk,behavior-hold-tap";
-      flavor = "balanced";
-      tapping-term-ms = <TAPPING_TERM_MS>;
-      bindings = <&none>, <&kp>;
-      #binding-cells = <2>;
-    };
-
-    /*
-    - tap: sticky ctrl
-    - hold: ctrl
-    - double-tap: sticky meh (ctrl + tap mod-morph)
-    - tap + hold: meh (ctrl + hold mod-morph)
-
-    From: https://github.com/urob/zmk-config/
-    */
-    /omit-if-no-ref/ ctrl_meh: ctrl_meh {
-      compatible = "zmk,behavior-mod-morph";
-      bindings = <&sk LCTRL>, <&sk MEH>;
-      mods = <(MOD_LCTL)>;
-      #binding-cells = <0>;
-    };
-
-    /*
     - tap: backspace
     - hold: repeat backspace
     - shift + tap: delete
@@ -144,41 +111,6 @@
     /omit-if-no-ref/ bkspc_del: backspace_delete {
       compatible = "zmk,behavior-mod-morph";
       bindings = <&kp BACKSPACE>, <&kp DELETE>;
-      mods = <(MOD_LSFT|MOD_RSFT)>;
-      #binding-cells = <0>;
-    };
-
-    /*
-    - tap: brightness up
-    - hold: repeat brightness up
-    - shift + tap: brightness down
-    - shift + hold: repeat brightness down
-    */
-    /omit-if-no-ref/ brightness: brightness {
-      compatible = "zmk,behavior-mod-morph";
-      bindings = <&kp C_BRI_UP>, <&kp C_BRI_DN>;
-      mods = <(MOD_LSFT|MOD_RSFT)>;
-      #binding-cells = <0>;
-    };
-
-    /*
-    - tap: next track
-    - shift + tap: prev track
-    */
-    /omit-if-no-ref/ next_prev: next_prev {
-      compatible = "zmk,behavior-mod-morph";
-      bindings = <&kp C_NEXT>, <&kp C_PREV>;
-      mods = <(MOD_LSFT|MOD_RSFT)>;
-      #binding-cells = <0>;
-    };
-
-    /*
-    - tap: volume up
-    - shift + tap: volume down
-    */
-    /omit-if-no-ref/ volume: volume {
-      compatible = "zmk,behavior-mod-morph";
-      bindings = <&kp C_VOL_UP>, <&kp C_VOL_DN>;
       mods = <(MOD_LSFT|MOD_RSFT)>;
       #binding-cells = <0>;
     };
