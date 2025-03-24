@@ -258,24 +258,6 @@ svg.keymap {
     --color--combo--text--shifted: var(--color--material--blue-gray--400);
     --color--combo--text--hold: var(--color--combo--text--tap);
 
-    --color--trans--bg: transparent;
-    --color--trans--border: var(--color--material--blue-gray--400);
-    --color--trans--text--tap: var(--color--trans--border);
-    --color--trans--text--shifted: var(--color--trans--text--tap);
-    --color--trans--text--hold: var(--color--trans--text--tap);
-
-    --color--none--bg: var(--color--trans--bg);
-    --color--none--border: var(--color--trans--border);
-    --color--none--text--tap: var(--color--trans--text--tap);
-    --color--none--text--shifted: var(--color--trans--text--shifted);
-    --color--none--text--hold: var(--color--trans--text--hold);
-
-    --color--ghost--bg: var(--color--trans--bg);
-    --color--ghost--border: var(--color--trans--border);
-    --color--ghost--text--tap: var(--color--trans--text--tap);
-    --color--ghost--text--shifted: var(--color--trans--text--shifted);
-    --color--ghost--text--hold: var(--color--trans--text--shifted);
-
     /*
      * ====================
      * /End Theme Variables
@@ -395,28 +377,6 @@ path.combo {
 .ghost {
   opacity: 0.4;
 }
-.trans {
-    --color--key--bg: var(--color--trans--bg);
-    --color--key--border: var(--color--trans--border);
-    --color--key--text--tap: var(--color--trans--text--tap);
-    --color--key--text--shifted: var(--color--trans--text--shifted);
-    --color--key--text--hold: var(--color--trans--text--hold);
-}
-.none {
-    --color--key--bg: var(--color--none--bg);
-    --color--key--border: var(--color--none--border);
-    --color--key--text--tap: var(--color--none--text--tap);
-    --color--key--text--shifted: var(--color--none--text--shifted);
-    --color--key--text--hold: var(--color--none--text--hold);
-}
-.ghost {
-    --color--key--bg: var(--color--ghost--bg);
-    --color--key--border: var(--color--ghost--border);
-    --color--key--text--tap: var(--color--ghost--text--tap);
-    --color--key--text--shifted: var(--color--ghost--text--shifted);
-    --color--key--text--hold: var(--color--ghost--text--hold);
-}
-
 
 /*
  * Overrides
